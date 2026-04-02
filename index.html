@@ -1939,10 +1939,10 @@
         <div class="topnav-dropdown" id="workflows-dropdown">
           <button class="topnav-dropdown-trigger" onclick="toggleWorkflowsDropdown(event)">Workflows <span class="material-symbols-outlined dropdown-arrow">expand_more</span></button>
           <div class="topnav-dropdown-menu">
+            <button class="topnav-dropdown-item" data-page="design-101" onclick="showPage('design-101');closeWorkflowsDropdown()">Designing with Claude</button>
             <button class="topnav-dropdown-item" data-page="research-101" onclick="showPage('research-101');closeWorkflowsDropdown()">UX Research</button>
             <button class="topnav-dropdown-item" data-page="market-research" onclick="showPage('market-research');closeWorkflowsDropdown()">Competitive &amp; Market Research</button>
             <button class="topnav-dropdown-item" data-page="concept-design" onclick="showPage('concept-design');closeWorkflowsDropdown()">Concept Design</button>
-            <button class="topnav-dropdown-item" data-page="design-101" onclick="showPage('design-101');closeWorkflowsDropdown()">Designing with Claude</button>
             <button class="topnav-dropdown-item" data-page="prototyping" onclick="showPage('prototyping');closeWorkflowsDropdown()">Prototyping &amp; Validation</button>
             <button class="topnav-dropdown-item" data-page="ux-eval" onclick="showPage('ux-eval');closeWorkflowsDropdown()">UX Evaluation</button>
             <button class="topnav-dropdown-item" data-page="ds-components" onclick="showPage('ds-components');closeWorkflowsDropdown()">Design System Components</button>
@@ -9138,7 +9138,7 @@ function showPage(id) {
   if (page) page.classList.add('active');
   // Handle dropdown pages
   const fundamentalsPages = ['adoption-101', 'claude-101', 'cli-101', 'git-101', 'prompting-101', 'skills-101'];
-  const workflowsPages = ['research-101', 'market-research', 'concept-design', 'design-101', 'prototyping', 'ux-eval', 'ds-components', 'handoff'];
+  const workflowsPages = ['design-101', 'research-101', 'market-research', 'concept-design', 'prototyping', 'ux-eval', 'ds-components', 'handoff'];
   if (fundamentalsPages.includes(id)) {
     const trigger = document.querySelector('#fundamentals-dropdown .topnav-dropdown-trigger');
     if (trigger) trigger.classList.add('is-active');
