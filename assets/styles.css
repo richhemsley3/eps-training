@@ -326,6 +326,19 @@ ul, ol { list-style: none; }
   flex: 1;
   overflow-y: auto;
   padding: clamp(32px, 4vw, 64px) clamp(24px, 4vw, 56px);
+  position: relative;
+}
+/* Scroll progress bar — fixed to bottom of topnav */
+.scroll-progress {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #013D5B;
+  width: 0%;
+  z-index: 51;
+  pointer-events: none;
 }
 .main-inner { max-width: 960px; margin: 0 auto; }
 .has-sidenav .main-inner { margin: 0; max-width: none; }
@@ -741,6 +754,8 @@ ul, ol { list-style: none; }
   align-items: flex-start;
   border: 1px solid rgba(0,0,0,0.08);
 }
+/* Tighten callout spacing when following a paragraph */
+p + .callout { margin-top: 32px; }
 .callout--tip { background: rgba(0,0,0,0.02); }
 .callout--warning { background: #FFF8ED; border-color: rgba(200,140,40,0.25); }
 .callout--insight { background: rgba(0,0,0,0.02); }
@@ -1741,6 +1756,15 @@ blockquote strong {
   font-weight: 400;
   font-style: italic;
 }
+/* Closing flourish beneath pull quotes */
+blockquote::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #D0CBC3;
+  margin-top: 32px;
+}
 
 /* ── Skill List ────────────────────────────────────── */
 .skill-list {
@@ -1845,7 +1869,14 @@ blockquote strong {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: #013D5B;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+}
+/* Tighten label → heading stack into a single unit */
+.explainer-label + .section-heading {
+  margin-top: 0;
+}
+.section-heading + .explainer-lead {
+  margin-top: 16px;
 }
 .explainer-section {
   margin-top: 0;
@@ -1870,10 +1901,21 @@ blockquote strong {
   max-width: 640px;
   margin-bottom: 40px;
 }
+/* Drop cap — editorial entrance to each section */
+.explainer-lead::first-letter {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 3.4em;
+  float: left;
+  line-height: 0.8;
+  margin-right: 8px;
+  margin-top: 4px;
+  color: #1C1A17;
+  font-weight: 400;
+}
 .concept-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
+  gap: 12px 24px;
   margin: 32px 0;
 }
 .concept-card {
@@ -1892,7 +1934,6 @@ blockquote strong {
   letter-spacing: -0.02em;
   text-transform: none;
   line-height: 1;
-  margin-bottom: 12px;
   margin-bottom: 8px;
 }
 .concept-card__title {
@@ -2425,17 +2466,7 @@ blockquote strong {
   color: #54514D;
   margin-bottom: 12px;
   margin-top: 32px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
 }
-.sub-label::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: #E0DCD3;
-}
-.home-section--dark .sub-label::after { background: rgba(255,255,255,0.12); }
 
 /* ── Feature card color accents ───────────────────── */
 .feature-card--blue { border-top: 3px solid #A6CBD6; }

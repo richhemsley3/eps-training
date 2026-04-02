@@ -64,6 +64,7 @@
       <nav class="secondary-sidenav" id="secondary-sidenav" style="display:none"></nav>
 
       <!-- Main Content -->
+      <div class="scroll-progress" id="scroll-progress"></div>
       <main class="main" id="main-scroll">
         <div class="main-inner">
 
@@ -100,7 +101,7 @@
           <!-- ── Learn by Topic ────────────────────── -->
           <div id="learn-by-topic" class="home-section">
             <span class="explainer-label">Learn by Topic</span>
-            <h2 class="section-heading" style="margin-top:8px">Build your knowledge</h2>
+            <h2 class="section-heading">Build your knowledge</h2>
 
             <div class="sub-label">Fundamentals</div>
             <div class="feature-cards">
@@ -174,7 +175,7 @@
           <!-- ── Follow a Program ──────────────────── -->
           <div class="home-section home-section--tinted">
             <span class="explainer-label">Structured Learning</span>
-            <h2 class="section-heading" style="margin-top:8px">Follow a program</h2>
+            <h2 class="section-heading">Follow a program</h2>
             <div class="learning-paths" style="grid-template-columns:repeat(2, 1fr)">
               <div class="learning-path">
                 <div class="learning-path__icon"><span class="material-symbols-outlined">timeline</span></div>
@@ -213,7 +214,7 @@
           <!-- ── Reference Tools ───────────────────── -->
           <div class="home-section">
             <span class="explainer-label">Reference</span>
-            <h2 class="section-heading" style="margin-top:8px">Tools and references</h2>
+            <h2 class="section-heading">Tools and references</h2>
             <div class="home-sections-grid">
               <button class="home-section-card" onclick="showPage('prompts')">
                 <div class="home-section-card__title">Prompt Library</div>
@@ -349,7 +350,7 @@ code .</code></pre><button class="inline-copy-btn" onclick="copyBlock(this)">Cop
           <!-- What is Claude -->
           <div class="explainer-section" id="s101-what">
             <span class="explainer-label">The Model</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">What Claude is</h2>
+            <h2 class="section-heading">What Claude is</h2>
             <p class="explainer-lead">Claude is a large language model built by Anthropic. It reads text, understands context, and generates responses — including code, copy, analysis, and structured documents. It has no memory between sessions unless you give it context explicitly.</p>
             <div class="concept-grid">
               <div class="concept-card">
@@ -385,7 +386,7 @@ code .</code></pre><button class="inline-copy-btn" onclick="copyBlock(this)">Cop
           <!-- What Claude Code looks like -->
           <div class="explainer-section" id="s101-products">
             <span class="explainer-label">The Tool</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">What Claude Code looks like</h2>
+            <h2 class="section-heading">What Claude Code looks like</h2>
             <p class="explainer-lead">Claude Code runs in your terminal — the same terminal you use for git, npm, or any other developer tool. You type <code>claude</code> inside a project folder and start a conversation. Claude reads your files, proposes changes, and writes code directly into your project.</p>
 
             <h3 class="subsection-heading">What it can do</h3>
@@ -456,7 +457,7 @@ code .</code></pre><button class="inline-copy-btn" onclick="copyBlock(this)">Cop
           <!-- How a session works -->
           <div class="explainer-section" id="s101-loop">
             <span class="explainer-label">The Loop</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">How a session works</h2>
+            <h2 class="section-heading">How a session works</h2>
             <p class="explainer-lead">A Claude Code session is a conversation that happens inside your project folder. Claude reads your files at the start of each session. You prompt, it proposes changes, you accept or reject. That's the loop — everything else is variation on it.</p>
             <div class="anatomy-list">
               <div class="anatomy-item">
@@ -517,7 +518,7 @@ code .</code></pre><button class="inline-copy-btn" onclick="copyBlock(this)">Cop
           <!-- Plan mode and oversight levels -->
           <div class="explainer-section" id="s101-modes">
             <span class="explainer-label">Oversight</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Plan mode and oversight levels</h2>
+            <h2 class="section-heading">Plan mode and oversight levels</h2>
             <p class="explainer-lead">Claude Code has three oversight modes. Press <code>Shift+Tab</code> at the prompt to cycle between them. The right mode depends on how much you trust what's about to happen — match oversight to risk, like supervising a junior designer.</p>
             <div class="concept-grid" style="grid-template-columns: repeat(3,1fr)">
               <div class="concept-card">
@@ -542,7 +543,7 @@ code .</code></pre><button class="inline-copy-btn" onclick="copyBlock(this)">Cop
           <!-- Parallel sessions and session management -->
           <div class="explainer-section" id="s101-sessions">
             <span class="explainer-label">Session Management</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Parallel sessions, naming, and resuming</h2>
+            <h2 class="section-heading">Parallel sessions, naming, and resuming</h2>
             <p class="explainer-lead">Each Claude Code session is an isolated context. Mixing unrelated tasks in one session degrades output for all of them. The solution is multiple focused sessions — and tools to manage them.</p>
             <div class="anatomy-list">
               <div class="anatomy-item">
@@ -586,7 +587,7 @@ code .</code></pre><button class="inline-copy-btn" onclick="copyBlock(this)">Cop
           <!-- How to prompt well -->
           <div class="explainer-section" id="s101-prompting">
             <span class="explainer-label">Prompting</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">How to write a good prompt</h2>
+            <h2 class="section-heading">How to write a good prompt</h2>
             <p class="explainer-lead">Most bad output comes from underprompted input. A good prompt has four parts — and most people include one. The more of these you give Claude, the less time you'll spend correcting the wrong thing.</p>
             <div class="anatomy-list">
               <div class="anatomy-item">
@@ -651,7 +652,7 @@ code .</code></pre><button class="inline-copy-btn" onclick="copyBlock(this)">Cop
           <!-- How to iterate and correct -->
           <div class="explainer-section" id="s101-iteration">
             <span class="explainer-label">Iteration</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">How to iterate and correct</h2>
+            <h2 class="section-heading">How to iterate and correct</h2>
             <p class="explainer-lead">Prompting is starting. Iteration is how you close the gap between Claude's first attempt and your actual intent. The right correction vocabulary makes the difference between a session that converges and one that spirals.</p>
             <div class="anatomy-list">
               <div class="anatomy-item">
@@ -731,7 +732,7 @@ code .</code></pre><button class="inline-copy-btn" onclick="copyBlock(this)">Cop
           <!-- Context windows -->
           <div class="explainer-section" id="s101-context">
             <span class="explainer-label">Memory &amp; Limits</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Context windows</h2>
+            <h2 class="section-heading">Context windows</h2>
             <p class="explainer-lead">A context window is the total amount of text Claude can hold in "working memory" at once — your prompt, the conversation history, and every file it's read. When a session gets long, earlier parts fall out of context. Claude isn't forgetting — it simply can't see that far back. The window isn't just storage — it's also where Claude reasons. A full window means worse thinking, even if the information is still technically there.</p>
 
             <h3 class="sub-heading">Monitor your usage</h3>
@@ -780,7 +781,7 @@ code .</code></pre><button class="inline-copy-btn" onclick="copyBlock(this)">Cop
           <!-- CLAUDE.md -->
           <div class="explainer-section" id="s101-claudemd">
             <span class="explainer-label">The Brief</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">What CLAUDE.md is</h2>
+            <h2 class="section-heading">What CLAUDE.md is</h2>
             <p class="explainer-lead">CLAUDE.md is a markdown file at the root of your project that Claude reads at the start of every session. It's your standing creative brief — visual language, conventions, constraints, and anti-patterns. Without it, Claude works from generic defaults. With it, Claude works from your system.</p>
             <div class="explainer-two-col">
               <div class="anatomy-list" style="margin:0">
@@ -900,7 +901,7 @@ Audience: power users, daily use.
           <!-- What is a skill -->
           <div class="explainer-section" id="s101-skills">
             <span class="explainer-label">Reusable Prompts</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">What a skill is</h2>
+            <h2 class="section-heading">What a skill is</h2>
             <p class="explainer-lead">A skill is a saved prompt template stored as a markdown file in <code>.claude/commands/</code>. Type <code>/skill-name</code> in any session and it runs — with your project context already loaded, and your variable input passed via <code>$ARGUMENTS</code>.</p>
             <div class="callout callout--example">
               <span class="material-symbols-outlined callout__icon">info</span>
@@ -991,7 +992,7 @@ explicitly specified.</code></pre></div>
           <!-- Three-pane workspace -->
           <div class="explainer-section" id="s101-workspace">
             <span class="explainer-label">Environment</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">The three-pane workspace</h2>
+            <h2 class="section-heading">The three-pane workspace</h2>
             <p class="explainer-lead">Multiple guides and experienced Claude Code designers converge on the same physical setup. Three panes, side by side, always visible. This isn't a suggestion — it's the single most impactful environment change you can make.</p>
 
             <div class="workspace-diagram">
@@ -1041,7 +1042,7 @@ explicitly specified.</code></pre></div>
           <!-- Design review workflow -->
           <div class="explainer-section" id="s101-review">
             <span class="explainer-label">First Workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Design review with Claude</h2>
+            <h2 class="section-heading">Design review with Claude</h2>
             <p class="explainer-lead">Every guide we've reviewed agrees on this: design review is the highest-value, lowest-risk way to start using Claude Code. You don't need to generate anything. You just ask Claude to look at what exists and tell you what's off.</p>
 
             <h3 class="subsection-heading">The screenshot review loop</h3>
@@ -1114,7 +1115,7 @@ explicitly specified.</code></pre></div>
           <!-- When to use what -->
           <div class="explainer-section" id="s101-progression">
             <span class="explainer-label">Confidence Ladder</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">When to use what</h2>
+            <h2 class="section-heading">When to use what</h2>
             <p class="explainer-lead">Not every design task belongs in Claude Code. The best designers use it selectively — starting with low-risk activities and expanding as confidence grows. Here's the progression that works.</p>
 
             <div class="progression-ladder">
@@ -1172,7 +1173,7 @@ explicitly specified.</code></pre></div>
           <!-- Mental models -->
           <div class="explainer-section" id="s101-mindset">
             <span class="explainer-label">Designer Mindset</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Mental models to shift</h2>
+            <h2 class="section-heading">Mental models to shift</h2>
             <p class="explainer-lead">The designers who get the most from Claude Code aren't the most technical — they're the ones who updated their mental model of what the tool is.</p>
             <div class="mental-model-list">
               <div class="mental-model-item">
@@ -1215,7 +1216,7 @@ explicitly specified.</code></pre></div>
           <!-- Common pitfalls -->
           <div class="explainer-section" id="s101-pitfalls">
             <span class="explainer-label">Avoid These</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Common pitfalls</h2>
+            <h2 class="section-heading">Common pitfalls</h2>
             <p class="explainer-lead">These mistakes come up in almost every guide and tutorial we reviewed. They're not theoretical — they're the patterns that trip up real designers in their first weeks with Claude Code.</p>
 
             <div class="mental-model-list">
@@ -1288,7 +1289,7 @@ explicitly specified.</code></pre></div>
           <!-- You are not alone -->
           <div class="explainer-section" id="cli-intro">
             <span class="explainer-label">Starting Point</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">You are not alone</h2>
+            <h2 class="section-heading">You are not alone</h2>
             <p class="explainer-lead">If the blank terminal window makes you uneasy, you're in very good company. Designers consistently describe the terminal as one of their biggest barriers to adopting new tools — and the fear is almost always worse than the reality.</p>
 
             <blockquote>"I was terrified that I was going to delete everything on my laptop and possibly the whole universe." — A designer describing their first week with the terminal</blockquote>
@@ -1322,7 +1323,7 @@ explicitly specified.</code></pre></div>
           <!-- What is the terminal? -->
           <div class="explainer-section" id="cli-what">
             <span class="explainer-label">The Basics</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">What is the terminal?</h2>
+            <h2 class="section-heading">What is the terminal?</h2>
             <p class="explainer-lead">The terminal is a text-based interface for talking to your computer. Instead of clicking folders and buttons, you type short commands.</p>
             <p>On Mac, the app is called <strong>Terminal</strong> — you'll find it in Applications → Utilities, or search for it with Spotlight.</p>
             <p>When you open Terminal, you'll see a prompt — usually ending in <code>$</code> or <code>%</code>. That's where you type. Press Enter to run a command.</p>
@@ -1359,7 +1360,7 @@ explicitly specified.</code></pre></div>
           <!-- Essential commands -->
           <div class="explainer-section" id="cli-commands">
             <span class="explainer-label">Reference</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Essential commands</h2>
+            <h2 class="section-heading">Essential commands</h2>
             <p class="explainer-lead">You don't need to memorize dozens of commands. These six will carry you through almost every Claude Code session.</p>
             <div class="anatomy-list">
               <div class="anatomy-item">
@@ -1410,7 +1411,7 @@ explicitly specified.</code></pre></div>
           <!-- Reading output -->
           <div class="explainer-section" id="cli-output">
             <span class="explainer-label">Understanding</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Reading what the terminal tells you</h2>
+            <h2 class="section-heading">Reading what the terminal tells you</h2>
             <p class="explainer-lead">Error messages are not failure — they're diagnostic information. Learning to read them is the single biggest unlock after learning the basic commands.</p>
 
             <h3 class="subsection-heading">The "read the last line first" habit</h3>
@@ -1460,7 +1461,7 @@ explicitly specified.</code></pre></div>
           <!-- Running a dev server -->
           <div class="explainer-section" id="cli-server">
             <span class="explainer-label">Applied Skill</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Running a dev server</h2>
+            <h2 class="section-heading">Running a dev server</h2>
             <p class="explainer-lead">When Claude Code builds something visual, you'll want to see it in a browser. That means running a local development server — a tiny program that serves your project files to your browser.</p>
 
             <h3 class="subsection-heading">The hotel analogy</h3>
@@ -1502,7 +1503,7 @@ explicitly specified.</code></pre></div>
           <!-- Package managers -->
           <div class="explainer-section" id="cli-packages">
             <span class="explainer-label">Concept</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Package managers</h2>
+            <h2 class="section-heading">Package managers</h2>
             <p class="explainer-lead">npm and yarn are like app stores for code libraries. When a project needs external tools or frameworks, a package manager downloads and installs them.</p>
 
             <div class="concept-grid">
@@ -1540,7 +1541,7 @@ explicitly specified.</code></pre></div>
           <!-- Tips & escape hatches -->
           <div class="explainer-section" id="cli-tips">
             <span class="explainer-label">Survival Guide</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Tips and escape hatches</h2>
+            <h2 class="section-heading">Tips and escape hatches</h2>
             <p class="explainer-lead">Small habits that make the terminal feel natural — and the escape hatches for when you get stuck.</p>
 
             <h3 class="subsection-heading">Productivity tips</h3>
@@ -1626,7 +1627,7 @@ explicitly specified.</code></pre></div>
           <!-- Your safety net -->
           <div class="explainer-section" id="git-why">
             <span class="explainer-label">Why It Matters</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Your safety net</h2>
+            <h2 class="section-heading">Your safety net</h2>
             <p class="explainer-lead">Git is a version control system — think of it as unlimited undo for your entire project. It's also the single most important tool for working confidently with Claude Code.</p>
             <p>Every time Claude makes changes to your files, those changes are real — they're written to disk. Git is your safety net. If Claude goes in a wrong direction, you can undo everything in seconds. If you like what Claude built, you can save a permanent checkpoint.</p>
 
@@ -1655,7 +1656,7 @@ explicitly specified.</code></pre></div>
           <!-- Git in Figma terms -->
           <div class="explainer-section" id="git-figma">
             <span class="explainer-label">Translation</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Git in Figma terms</h2>
+            <h2 class="section-heading">Git in Figma terms</h2>
             <p class="explainer-lead">You already understand version control — you use it in Figma every day. Git is the same concepts with different names.</p>
 
             <div class="anatomy-list">
@@ -1700,7 +1701,7 @@ explicitly specified.</code></pre></div>
           <!-- How git thinks -->
           <div class="explainer-section" id="git-model">
             <span class="explainer-label">Mental Model</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">How git thinks</h2>
+            <h2 class="section-heading">How git thinks</h2>
             <p class="explainer-lead">Git tracks your project as a series of snapshots — like a time machine that can visit any point in your project's history. Understanding these four concepts makes everything else click.</p>
             <div class="concept-grid">
               <div class="concept-card">
@@ -1732,7 +1733,7 @@ explicitly specified.</code></pre></div>
           <!-- Essential commands -->
           <div class="explainer-section" id="git-commands">
             <span class="explainer-label">Reference</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Essential commands</h2>
+            <h2 class="section-heading">Essential commands</h2>
             <p class="explainer-lead">Six commands that cover 95% of what you'll need. You can always look up the rest later.</p>
             <div class="anatomy-list">
               <div class="anatomy-item">
@@ -1783,7 +1784,7 @@ explicitly specified.</code></pre></div>
           <!-- The checkpoint habit -->
           <div class="explainer-section" id="git-habit">
             <span class="explainer-label">Core Practice</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">The checkpoint habit</h2>
+            <h2 class="section-heading">The checkpoint habit</h2>
             <p class="explainer-lead">One simple rhythm will keep your work safe through every Claude Code session. This is the most important thing on this page.</p>
 
             <h3 class="subsection-heading">The two-commit workflow</h3>
@@ -1826,7 +1827,7 @@ explicitly specified.</code></pre></div>
           <!-- Experimenting safely -->
           <div class="explainer-section" id="git-branches">
             <span class="explainer-label">Advanced</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Experimenting safely</h2>
+            <h2 class="section-heading">Experimenting safely</h2>
             <p class="explainer-lead">Branches let you create a parallel universe where you can experiment freely. If the experiment works, merge it back. If not, discard it. Zero risk to your working project.</p>
 
             <h3 class="subsection-heading">When to branch</h3>
@@ -1868,7 +1869,7 @@ explicitly specified.</code></pre></div>
           <!-- When things go wrong -->
           <div class="explainer-section" id="git-panic">
             <span class="explainer-label">Recovery</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">When things go wrong</h2>
+            <h2 class="section-heading">When things go wrong</h2>
             <p class="explainer-lead">Git almost never destroys data. Here's how to recover from the most common mistakes — bookmark this section.</p>
 
             <div class="anatomy-list">
@@ -1920,7 +1921,7 @@ explicitly specified.</code></pre></div>
           <!-- Keeping things clean -->
           <div class="explainer-section" id="git-ignore">
             <span class="explainer-label">Housekeeping</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Keeping things clean</h2>
+            <h2 class="section-heading">Keeping things clean</h2>
             <p class="explainer-lead">A <code>.gitignore</code> file tells git which files to pretend don't exist — like a "do not disturb" list for your project.</p>
 
             <h3 class="subsection-heading">Essential entries for every project</h3>
@@ -1974,7 +1975,7 @@ explicitly specified.</code></pre></div>
           <!-- The shift -->
           <div class="explainer-section" id="prompt-mindset">
             <span class="explainer-label">The Shift</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Beyond prompting</h2>
+            <h2 class="section-heading">Beyond prompting</h2>
             <p class="explainer-lead">Most designers focus on writing better prompts. But prompting is just one input into Claude's output. The real lever is <strong>context engineering</strong> — shaping everything Claude knows when it works for you.</p>
             <p>A mediocre prompt with great context (well-written CLAUDE.md, design tokens, skills) consistently outperforms a brilliant prompt with no context. The designers getting the best results aren't prompt wizards — they've built systems that give Claude the right knowledge at the right time.</p>
 
@@ -2005,7 +2006,7 @@ explicitly specified.</code></pre></div>
           <!-- The context stack -->
           <div class="explainer-section" id="prompt-stack">
             <span class="explainer-label">Architecture</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">The context stack</h2>
+            <h2 class="section-heading">The context stack</h2>
             <p class="explainer-lead">Every piece of information Claude uses comes from one of these four layers. Understanding them — and investing in the right ones — is the core skill of context engineering.</p>
 
             <div class="anatomy-list">
@@ -2051,7 +2052,7 @@ explicitly specified.</code></pre></div>
           <!-- The WIRE framework -->
           <div class="explainer-section" id="prompt-framework">
             <span class="explainer-label">Framework</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Structuring your prompts</h2>
+            <h2 class="section-heading">Structuring your prompts</h2>
             <p class="explainer-lead">Not every prompt needs structure, but when results aren't landing, this framework helps. Think of it like wireframing your prompt before you write it.</p>
 
             <h3 class="subsection-heading">The WIRE framework</h3>
@@ -2092,7 +2093,7 @@ explicitly specified.</code></pre></div>
           <!-- Prompt types -->
           <div class="explainer-section" id="prompt-types">
             <span class="explainer-label">Applied</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Prompt types for design work</h2>
+            <h2 class="section-heading">Prompt types for design work</h2>
             <p class="explainer-lead">Different tasks call for different prompting approaches. Here are the five types you'll use most, with templates you can adapt.</p>
 
             <h3 class="subsection-heading">Build prompts — creating something new</h3>
@@ -2146,7 +2147,7 @@ design system and identify:
           <!-- Common mistakes -->
           <div class="explainer-section" id="prompt-mistakes">
             <span class="explainer-label">Pitfalls</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">The 8 traps</h2>
+            <h2 class="section-heading">The 8 traps</h2>
             <p class="explainer-lead">The most common prompting mistakes designers make — and the fix for each one.</p>
 
             <div class="anatomy-list">
@@ -2212,7 +2213,7 @@ design system and identify:
           <!-- Specificity spectrum -->
           <div class="explainer-section" id="prompt-specificity">
             <span class="explainer-label">Strategy</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">When to be specific vs. open-ended</h2>
+            <h2 class="section-heading">When to be specific vs. open-ended</h2>
             <p class="explainer-lead">It's not always "be more specific." The right level of direction depends on where you are in the design process.</p>
 
             <div class="concept-grid">
@@ -2239,7 +2240,7 @@ design system and identify:
           <!-- Providing context -->
           <div class="explainer-section" id="prompt-context">
             <span class="explainer-label">Session Management</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Managing conversations</h2>
+            <h2 class="section-heading">Managing conversations</h2>
             <p class="explainer-lead">How you manage the conversation itself is the third layer of context engineering. A focused, well-managed session produces dramatically better output than a sprawling one — even with identical prompts.</p>
 
             <h3 class="subsection-heading">One task, one session</h3>
@@ -2280,7 +2281,7 @@ we rejected.</code></pre></div>
           <!-- The evolution -->
           <div class="explainer-section" id="prompt-evolution">
             <span class="explainer-label">Growth</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">How context engineering evolves</h2>
+            <h2 class="section-heading">How context engineering evolves</h2>
             <p class="explainer-lead">Every designer who uses Claude Code describes the same arc — from writing prompts to building systems. Understanding it helps you know where you are and where you're headed.</p>
 
             <div class="anatomy-list">
@@ -2333,7 +2334,7 @@ we rejected.</code></pre></div>
           <!-- What are Skills -->
           <div class="explainer-section" id="skills-what">
             <span class="explainer-label">Concept</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">A prompt that graduated</h2>
+            <h2 class="section-heading">A prompt that graduated</h2>
             <p class="explainer-lead">A Skill is a reusable set of instructions saved as a markdown file. Instead of retyping the same prompt every session, you save it once and invoke it with a slash command — <code>/design-review</code>, <code>/build-component</code>, <code>/check-accessibility</code>.</p>
 
             <p>Think of it like onboarding a new team member. You transfer two things: <strong>knowledge</strong> (your design principles, token specs, brand guidelines) and <strong>abilities</strong> (how to review, generate, and audit). Skills provide both — and unlike a human, Claude never forgets what you taught it.</p>
@@ -2365,7 +2366,7 @@ we rejected.</code></pre></div>
           <!-- Skills vs CLAUDE.md -->
           <div class="explainer-section" id="skills-vs-claudemd">
             <span class="explainer-label">Decision</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Skills vs CLAUDE.md</h2>
+            <h2 class="section-heading">Skills vs CLAUDE.md</h2>
             <p class="explainer-lead">Both encode your design knowledge, but they serve different purposes. Getting this distinction right keeps your system lean and effective.</p>
 
             <div class="anatomy-list">
@@ -2397,7 +2398,7 @@ we rejected.</code></pre></div>
           <!-- Anatomy of a Skill -->
           <div class="explainer-section" id="skills-anatomy">
             <span class="explainer-label">Structure</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Anatomy of a Skill</h2>
+            <h2 class="section-heading">Anatomy of a Skill</h2>
             <p class="explainer-lead">A Skill is a markdown file with a YAML header and instructions. Here's what each part does.</p>
 
             <div class="code-block"><pre><code>---
@@ -2469,7 +2470,7 @@ Return a markdown checklist:
           <!-- Skill types for designers -->
           <div class="explainer-section" id="skills-types">
             <span class="explainer-label">Categories</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Skill types for designers</h2>
+            <h2 class="section-heading">Skill types for designers</h2>
             <p class="explainer-lead">Skills fall into two categories: knowledge that Claude references automatically, and workflows you invoke for specific tasks.</p>
 
             <h3 class="subsection-heading">Reference skills — your design knowledge base</h3>
@@ -2542,7 +2543,7 @@ Return a markdown checklist:
           <!-- Example skills -->
           <div class="explainer-section" id="skills-examples">
             <span class="explainer-label">Examples</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Example skills for designers</h2>
+            <h2 class="section-heading">Example skills for designers</h2>
             <p class="explainer-lead">Full, copy-paste-ready skill files you can drop into <code>.claude/skills/</code> and start using immediately. Adapt the specifics to your design system.</p>
 
             <h3 class="subsection-heading">Prototype a page</h3>
@@ -2755,7 +2756,7 @@ Create a handoff document for $ARGUMENTS.
           <!-- When to create a Skill -->
           <div class="explainer-section" id="skills-when">
             <span class="explainer-label">Decision</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">When to create a Skill</h2>
+            <h2 class="section-heading">When to create a Skill</h2>
             <p class="explainer-lead">Not everything needs to be a Skill. Here's the decision framework.</p>
 
             <div class="concept-grid">
@@ -2783,7 +2784,7 @@ Create a handoff document for $ARGUMENTS.
           <!-- Common mistakes -->
           <div class="explainer-section" id="skills-mistakes">
             <span class="explainer-label">Pitfalls</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Common mistakes</h2>
+            <h2 class="section-heading">Common mistakes</h2>
             <p class="explainer-lead">Patterns that make Skills less effective — learned from validating hundreds of real-world Skills.</p>
 
             <div class="anatomy-list">
@@ -2828,7 +2829,7 @@ Create a handoff document for $ARGUMENTS.
           <!-- Getting started -->
           <div class="explainer-section" id="skills-start">
             <span class="explainer-label">Growth</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Your first Skills</h2>
+            <h2 class="section-heading">Your first Skills</h2>
             <p class="explainer-lead">Start simple, build up over time. Here's the progression most designers follow.</p>
 
             <div class="anatomy-list">
@@ -2881,7 +2882,7 @@ Create a handoff document for $ARGUMENTS.
           <!-- Why research changes first -->
           <div class="explainer-section" id="res-why">
             <span class="explainer-label">The Opportunity</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Why research changes first</h2>
+            <h2 class="section-heading">Why research changes first</h2>
             <p class="explainer-lead">80% of researchers now use AI in their workflow. Research involves large volumes of unstructured text — exactly what LLMs excel at processing.</p>
 
             <p>Research is where AI delivers the most immediate, tangible value for design teams. Not because the tools are better for research, but because the <strong>raw material of research — transcripts, survey responses, field notes — is text</strong>. And text is AI's native format.</p>
@@ -2915,7 +2916,7 @@ Create a handoff document for $ARGUMENTS.
           <!-- The research pipeline -->
           <div class="explainer-section" id="res-pipeline">
             <span class="explainer-label">The Framework</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">The research pipeline</h2>
+            <h2 class="section-heading">The research pipeline</h2>
             <p class="explainer-lead">Five steps from raw data to actionable insight. AI's trustworthiness varies at each step — know where to lean on it and where to hold the reins.</p>
 
             <div class="anatomy-list">
@@ -2976,7 +2977,7 @@ Create a handoff document for $ARGUMENTS.
           <!-- What stays human -->
           <div class="explainer-section" id="res-boundaries">
             <span class="explainer-label">Judgment Calls</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">What stays human</h2>
+            <h2 class="section-heading">What stays human</h2>
             <p class="explainer-lead">AI can process research data. It cannot do research. These are the judgment calls that remain yours.</p>
 
             <div class="mental-model-list">
@@ -3018,7 +3019,7 @@ Create a handoff document for $ARGUMENTS.
           <!-- Transcript analysis -->
           <div class="explainer-section" id="res-transcripts">
             <span class="explainer-label">Workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Transcript analysis</h2>
+            <h2 class="section-heading">Transcript analysis</h2>
             <p class="explainer-lead">The most common research workflow with Claude — turning hours of interview transcripts into structured, actionable observations.</p>
 
             <div class="anatomy-list">
@@ -3088,7 +3089,7 @@ For each observation, include:
           <!-- Affinity mapping -->
           <div class="explainer-section" id="res-affinity">
             <span class="explainer-label">Workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Affinity mapping</h2>
+            <h2 class="section-heading">Affinity mapping</h2>
             <p class="explainer-lead">Turn a flat list of observations into structured groupings — and ask for multiple clustering axes to avoid locking into one perspective too early.</p>
 
             <p>Traditional affinity mapping involves sticky notes on a wall and hours of manual sorting. Claude can propose initial groupings in seconds — but the real value is asking for <strong>multiple clustering axes</strong>. Instead of one organization, get three or four. Each reveals different patterns in the same data.</p>
@@ -3133,7 +3134,7 @@ across all three axes? These are your highest-confidence findings.</code></pre><
           <!-- Survey synthesis -->
           <div class="explainer-section" id="res-surveys">
             <span class="explainer-label">Workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Survey synthesis</h2>
+            <h2 class="section-heading">Survey synthesis</h2>
             <p class="explainer-lead">A two-pass approach that keeps the researcher in control of the codebook while letting AI handle the volume.</p>
 
             <div class="anatomy-list">
@@ -3179,7 +3180,7 @@ across all three axes? These are your highest-confidence findings.</code></pre><
           <!-- Persona generation -->
           <div class="explainer-section" id="res-personas">
             <span class="explainer-label">Workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Persona generation</h2>
+            <h2 class="section-heading">Persona generation</h2>
             <p class="explainer-lead">Feed synthesized observations — not raw transcripts — and ask for behavioral dimensions instead of demographics.</p>
 
             <p>AI-generated personas are seductive because they feel complete. They have names, job titles, frustrations, and goals — all neatly organized. But completeness is not accuracy. A persona that reads well but doesn't trace back to observed behavior is fiction, not research.</p>
@@ -3220,7 +3221,7 @@ across all three axes? These are your highest-confidence findings.</code></pre><
           <!-- Journey mapping -->
           <div class="explainer-section" id="res-journeys">
             <span class="explainer-label">Workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Journey mapping</h2>
+            <h2 class="section-heading">Journey mapping</h2>
             <p class="explainer-lead">Organize observations by phase and touchpoint, then let Claude identify emotional highs and lows, pain points, and opportunities.</p>
 
             <p>Journey maps are most useful when they reveal the <strong>emotional shape</strong> of an experience — not just the steps, but how users feel at each step. Claude is good at organizing observations into phases and identifying where frustration clusters. Your job is to validate the emotional interpretation and identify the design opportunities.</p>
@@ -3261,7 +3262,7 @@ across all three axes? These are your highest-confidence findings.</code></pre><
           <!-- Giving Claude research context -->
           <div class="explainer-section" id="res-context">
             <span class="explainer-label">Setup</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Giving Claude research context</h2>
+            <h2 class="section-heading">Giving Claude research context</h2>
             <p class="explainer-lead">What to put in CLAUDE.md and research skills so every session starts with the context Claude needs to do useful analysis.</p>
 
             <p>Research sessions are only as good as the context you provide. Without knowing your research questions, participant demographics, and analysis framework, Claude will produce generic output. Set up your <code>CLAUDE.md</code> and a dedicated research skill to front-load this context.</p>
@@ -3332,7 +3333,7 @@ For each observation:
           <!-- Research-specific pitfalls -->
           <div class="explainer-section" id="res-pitfalls">
             <span class="explainer-label">Avoid These</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Research-specific pitfalls</h2>
+            <h2 class="section-heading">Research-specific pitfalls</h2>
             <p class="explainer-lead">Five patterns that undermine research quality when using AI — learned from real projects where plausible output masked serious problems.</p>
 
             <div class="mental-model-list">
@@ -3399,7 +3400,7 @@ For each observation:
           <!-- Design exploration -->
           <div class="explainer-section" id="des-exploration">
             <span class="explainer-label">Starting Point</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Design exploration</h2>
+            <h2 class="section-heading">Design exploration</h2>
             <p class="explainer-lead">The value of AI in early design isn't getting to a final answer faster — it's expanding the possibility space before you commit to a direction.</p>
 
             <p>Most designers start a project with one or two layout ideas in mind and refine from there. Claude changes the math. Instead of exploring two directions deeply, you can <strong>explore eight directions quickly</strong> — then apply your judgment to the one worth refining. The point is not to accept Claude's output. It's to see options you wouldn't have considered.</p>
@@ -3439,7 +3440,7 @@ For each observation:
           <!-- Component creation -->
           <div class="explainer-section" id="des-components">
             <span class="explainer-label">Workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Component creation</h2>
+            <h2 class="section-heading">Component creation</h2>
             <p class="explainer-lead">Building design system components with Claude follows a clear workflow: spec, generate, review, refine. The quality of the spec determines the quality of everything after it.</p>
 
             <div class="anatomy-list">
@@ -3515,7 +3516,7 @@ For each observation:
           <!-- Responsive design -->
           <div class="explainer-section" id="des-responsive">
             <span class="explainer-label">Workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Responsive design</h2>
+            <h2 class="section-heading">Responsive design</h2>
             <p class="explainer-lead">Responsive layout is largely mechanical — and that makes it one of the highest-leverage workflows for Claude. Let AI handle the breakpoints while you focus on the experience at each size.</p>
 
             <p>Making a layout work across viewports involves predictable decisions: stack columns, resize type, adjust spacing, hide secondary content. Claude handles this mechanical translation well. The design judgment — what gets priority on mobile, how navigation adapts, which content collapses — stays with you.</p>
@@ -3555,7 +3556,7 @@ For each observation:
           <!-- Accessibility audits -->
           <div class="explainer-section" id="des-accessibility">
             <span class="explainer-label">Workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Accessibility audits</h2>
+            <h2 class="section-heading">Accessibility audits</h2>
             <p class="explainer-lead">Accessibility checking is the most reliable, highest-trust AI workflow for designers. The rules are codified, the criteria are measurable, and the output is verifiable.</p>
 
             <p>Unlike visual design or content strategy — where AI output requires subjective judgment — accessibility has <strong>clear pass/fail criteria</strong>. WCAG guidelines are specific. Color contrast ratios are mathematical. ARIA roles are either correct or incorrect. This makes accessibility auditing the workflow where you can trust Claude the most and verify the fastest.</p>
@@ -3621,7 +3622,7 @@ For each issue found, provide:
           <!-- Design tokens -->
           <div class="explainer-section" id="des-tokens">
             <span class="explainer-label">Workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Design tokens</h2>
+            <h2 class="section-heading">Design tokens</h2>
             <p class="explainer-lead">Design tokens are the connective tissue of a design system. Claude can apply them consistently, catch hardcoded values, and ensure your components actually use the system they claim to follow.</p>
 
             <p>Token drift is one of the most common design system problems: components that look correct but use hardcoded values instead of tokens, or use the wrong token level (a primitive color instead of a semantic alias). These issues compound silently until a rebrand or dark mode initiative exposes them all at once. Claude catches them in real-time.</p>
@@ -3669,7 +3670,7 @@ For each issue found, provide:
           <!-- Rapid prototyping -->
           <div class="explainer-section" id="des-prototyping">
             <span class="explainer-label">Workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Rapid prototyping</h2>
+            <h2 class="section-heading">Rapid prototyping</h2>
             <p class="explainer-lead">Building functional prototypes in code with Claude instead of static mockups changes the feedback loop. You get real interactions, real data, and real responsive behavior — in minutes, not days.</p>
 
             <p>Static mockups communicate intent. Code prototypes <strong>demonstrate behavior</strong>. When a stakeholder can click through a flow, resize the window, and see how states change, the conversation shifts from "what will this look like?" to "how should this work?" — a more productive question to answer early.</p>
@@ -3709,7 +3710,7 @@ For each issue found, provide:
           <!-- Design review with AI -->
           <div class="explainer-section" id="des-review">
             <span class="explainer-label">Workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Design review with AI</h2>
+            <h2 class="section-heading">Design review with AI</h2>
             <p class="explainer-lead">Use Claude as a first-pass reviewer — catching consistency issues, token violations, and accessibility gaps before the human critique. Not replacing design crits, but preparing for them.</p>
 
             <p>Human design review time is expensive and limited. When reviewers spend 20 minutes catching spacing inconsistencies and missing ARIA labels, they have less time for the high-value feedback: is this the right interaction model? Does the hierarchy communicate priority? Does the flow make sense? Claude handles the mechanical checks so <strong>human reviewers can focus on judgment calls</strong>.</p>
@@ -3757,7 +3758,7 @@ For each issue found, provide:
           <!-- Design documentation -->
           <div class="explainer-section" id="des-documentation">
             <span class="explainer-label">Workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Design documentation</h2>
+            <h2 class="section-heading">Design documentation</h2>
             <p class="explainer-lead">Claude can turn working code into team documentation — component specs, usage guidelines, API references, and do's and don'ts — so you never have to write docs from scratch again.</p>
 
             <p>Documentation is where design systems go to die. Teams build beautiful components, then never document them because writing docs is tedious and always deprioritized. Claude eliminates the tedium. <strong>Point it at a component and it generates the documentation from the code itself</strong> — usage examples, prop tables, accessibility notes, and edge case warnings included.</p>
@@ -3805,7 +3806,7 @@ For each issue found, provide:
           <!-- Iteration patterns -->
           <div class="explainer-section" id="des-iteration">
             <span class="explainer-label">Technique</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Iteration patterns</h2>
+            <h2 class="section-heading">Iteration patterns</h2>
             <p class="explainer-lead">How to iterate effectively with Claude: when to refine in-session, when to start fresh, and how to give corrections that actually improve the output.</p>
 
             <p>Most designers either over-iterate (spending 20 rounds of corrections on diminishing returns) or under-iterate (accepting the first output because it looks "close enough"). Effective iteration with Claude follows predictable patterns — learn them and your output quality jumps significantly.</p>
@@ -3849,7 +3850,7 @@ For each issue found, provide:
           <!-- CLAUDE.md for designers -->
           <div class="explainer-section" id="des-claudemd">
             <span class="explainer-label">Setup</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">CLAUDE.md for designers</h2>
+            <h2 class="section-heading">CLAUDE.md for designers</h2>
             <p class="explainer-lead">What to put in your CLAUDE.md so every session starts with your design system, conventions, and quality standards already loaded. Set it up once, benefit forever.</p>
 
             <p>Your CLAUDE.md is the difference between Claude that generates generic components and Claude that generates components <strong>in your design system, with your tokens, following your conventions</strong>. Designers who set up a strong CLAUDE.md spend less time correcting output because Claude gets the basics right from the first prompt.</p>
@@ -3961,7 +3962,7 @@ For each issue found, provide:
           <!-- The identity question -->
           <div class="explainer-section" id="adopt-identity">
             <span class="explainer-label">The Real Barrier</span>
-            <h2 class="section-heading" style="margin-top:8px">The identity question</h2>
+            <h2 class="section-heading">The identity question</h2>
             <p class="explainer-lead">The biggest barrier to AI adoption isn't skill — it's identity. Senior designers resist AI not because they can't learn it, but because it threatens something deeper: their sense of what makes them valuable.</p>
 
             <div class="concept-grid">
@@ -4003,7 +4004,7 @@ For each issue found, provide:
           <!-- The 60% problem -->
           <div class="explainer-section" id="adopt-sixty">
             <span class="explainer-label">Setting Expectations</span>
-            <h2 class="section-heading" style="margin-top:8px">The 60% problem</h2>
+            <h2 class="section-heading">The 60% problem</h2>
             <p class="explainer-lead">Claude gets you to 60% — fast. Structure, layout, component assembly, responsive behavior, first-draft copy. But that last 40% is where the design actually lives. Understanding this split is the most important expectation to set.</p>
 
             <div class="compare-grid" style="margin-top:24px">
@@ -4048,19 +4049,13 @@ For each issue found, provide:
               </div>
             </div>
 
-            <div class="callout callout--tip">
-              <span class="material-symbols-outlined callout__icon">lightbulb</span>
-              <div class="callout__body">
-                <div class="callout__title">Tell your team this number on day one</div>
-                <div class="callout__text">When people expect 100% and get 60%, they're disappointed. When they expect 60% and get 60%, they're delighted — because they just skipped hours of scaffolding work. Frame the tool correctly and adoption goes smoothly. Frame it as magic and you'll spend months managing disappointment.</div>
-              </div>
-            </div>
+            <p>Tell your team this number on day one. When people expect 100% and get 60%, they're disappointed. When they expect 60% and get 60%, they're delighted — because they just skipped hours of scaffolding work. Frame the tool correctly and adoption goes smoothly. Frame it as magic and you'll spend months managing disappointment.</p>
           </div>
 
           <!-- What stays human -->
           <div class="explainer-section" id="adopt-boundaries">
             <span class="explainer-label">Clear Lines</span>
-            <h2 class="section-heading" style="margin-top:8px">What stays human</h2>
+            <h2 class="section-heading">What stays human</h2>
             <p class="explainer-lead">AI changes what you spend time on, but it doesn't change what requires human judgment. These six capabilities are yours — and they become more valuable, not less, as AI handles the mechanical work.</p>
 
             <div class="anatomy-list anatomy-list--with-icons">
@@ -4120,7 +4115,7 @@ For each issue found, provide:
           <!-- How the workflow changes -->
           <div class="explainer-section" id="adopt-before-after">
             <span class="explainer-label">Process Change</span>
-            <h2 class="section-heading" style="margin-top:8px">How the workflow changes</h2>
+            <h2 class="section-heading">How the workflow changes</h2>
             <p class="explainer-lead">AI doesn't add a step to your process — it reshuffles where you spend your time. Prototype production drops from 60-70% of design time to 30-40%. That freed time goes to critique, direction-setting, and higher-order design thinking.</p>
 
             <div class="concept-grid">
@@ -4170,7 +4165,7 @@ For each issue found, provide:
           <!-- When to use what -->
           <div class="explainer-section" id="adopt-when">
             <span class="explainer-label">Decision Guide</span>
-            <h2 class="section-heading" style="margin-top:8px">When to use what</h2>
+            <h2 class="section-heading">When to use what</h2>
             <p class="explainer-lead">AI isn't equally useful for everything. Some tasks are high-leverage — structured, repeatable, text-heavy. Others are low-leverage — visual, ambiguous, emotional. Knowing the difference saves you from both under-using and over-using the tool.</p>
 
             <div class="compare-grid" style="margin-top:24px">
@@ -4198,7 +4193,7 @@ For each issue found, provide:
           <!-- Session awareness -->
           <div class="explainer-section" id="adopt-sessions">
             <span class="explainer-label">Working Effectively</span>
-            <h2 class="section-heading" style="margin-top:8px">Session awareness</h2>
+            <h2 class="section-heading">Session awareness</h2>
             <p class="explainer-lead">Claude sessions aren't infinite. Understanding how they work — and how they degrade — is one of the most practical things you can learn. It directly affects the quality of what you get back.</p>
 
             <h3 class="subsection-heading">Context windows have limits</h3>
@@ -4232,34 +4227,26 @@ For each issue found, provide:
 
             <h3 class="subsection-heading">Practical habits for session management</h3>
 
-            <div class="key-principles">
-              <div class="principle-card">
-                <div class="principle-card__number">1</div>
-                <div class="principle-card__content">
-                  <div class="principle-card__title">Use /compact deliberately</div>
-                  <div class="principle-card__desc">When a session gets long, use <code>/compact</code> to summarize and free up context space. Tell Claude what to keep: "Keep the token names, component structure, and spacing decisions. Drop the early exploration." This extends a session's useful life.</div>
-                </div>
+            <div class="concept-grid">
+              <div class="concept-card">
+                <div class="concept-card__num">01</div>
+                <div class="concept-card__title">Use /compact deliberately</div>
+                <div class="concept-card__desc">When a session gets long, use <code>/compact</code> to summarize and free up context space. Tell Claude what to keep: "Keep the token names, component structure, and spacing decisions. Drop the early exploration." This extends a session's useful life.</div>
               </div>
-              <div class="principle-card">
-                <div class="principle-card__number">2</div>
-                <div class="principle-card__content">
-                  <div class="principle-card__title">Start fresh sessions for new tasks</div>
-                  <div class="principle-card__desc">Don't reuse a prototyping session for a documentation task. Each new task gets a clean session with a focused CLAUDE.md context. Starting fresh is cheap — debugging a confused session is expensive.</div>
-                </div>
+              <div class="concept-card">
+                <div class="concept-card__num">02</div>
+                <div class="concept-card__title">Start fresh sessions for new tasks</div>
+                <div class="concept-card__desc">Don't reuse a prototyping session for a documentation task. Each new task gets a clean session with a focused CLAUDE.md context. Starting fresh is cheap — debugging a confused session is expensive.</div>
               </div>
-              <div class="principle-card">
-                <div class="principle-card__number">3</div>
-                <div class="principle-card__content">
-                  <div class="principle-card__title">Verify as you go, not at the end</div>
-                  <div class="principle-card__desc">Review Claude's output after each step, not after ten steps. Catching a hallucinated token name on step 2 is a quick fix. Catching it on step 10 means unwinding everything built on top of it.</div>
-                </div>
+              <div class="concept-card">
+                <div class="concept-card__num">03</div>
+                <div class="concept-card__title">Verify as you go, not at the end</div>
+                <div class="concept-card__desc">Review Claude's output after each step, not after ten steps. Catching a hallucinated token name on step 2 is a quick fix. Catching it on step 10 means unwinding everything built on top of it.</div>
               </div>
-              <div class="principle-card">
-                <div class="principle-card__number">4</div>
-                <div class="principle-card__content">
-                  <div class="principle-card__title">Write decisions down outside the session</div>
-                  <div class="principle-card__desc">Use CLAUDE.md and DESIGN.md to capture key decisions. These files persist across sessions — so when you start fresh, Claude reads them and picks up where you left off without you re-explaining everything.</div>
-                </div>
+              <div class="concept-card">
+                <div class="concept-card__num">04</div>
+                <div class="concept-card__title">Write decisions down outside the session</div>
+                <div class="concept-card__desc">Use CLAUDE.md and DESIGN.md to capture key decisions. These files persist across sessions — so when you start fresh, Claude reads them and picks up where you left off without you re-explaining everything.</div>
               </div>
             </div>
 
@@ -4275,7 +4262,7 @@ For each issue found, provide:
           <!-- Confidence milestones -->
           <div class="explainer-section" id="adopt-milestones">
             <span class="explainer-label">Your Progress</span>
-            <h2 class="section-heading" style="margin-top:8px">Confidence milestones</h2>
+            <h2 class="section-heading">Confidence milestones</h2>
             <p class="explainer-lead">Adoption isn't binary — it's a progression. These six milestones map the journey from first install to systems-level thinking. Know where you are so you know what to work on next.</p>
 
             <div class="progression-ladder">
@@ -4341,27 +4328,24 @@ For each issue found, provide:
           <!-- Self-assessment -->
           <div class="explainer-section" id="adopt-self-assess">
             <span class="explainer-label">Check-in</span>
-            <h2 class="section-heading" style="margin-top:8px">Self-assessment</h2>
+            <h2 class="section-heading">Self-assessment</h2>
             <p class="explainer-lead">Use these checklists at 30, 60, and 90 days to gauge where you are. Be honest — the goal isn't to race through milestones but to build genuine confidence at each level before moving on.</p>
 
-            <h3 class="subsection-heading">By day 30</h3>
+            <h3 class="subsection-heading" style="color:#0C4A69">By day 30</h3>
             <div class="anatomy-list">
               <div class="anatomy-item">
-                <div class="anatomy-icon" style="background:#EBF4F5;color:#0C4A69"><span class="material-symbols-outlined">check_circle</span></div>
                 <div class="anatomy-content">
                   <div class="anatomy-title">Can you start a Claude session without referring to docs?</div>
                   <div class="anatomy-desc">You know the basic commands: <code>claude</code>, <code>/undo</code>, <code>/clear</code>, <code>Shift+Tab</code> for modes. The mechanics are muscle memory.</div>
                 </div>
               </div>
               <div class="anatomy-item">
-                <div class="anatomy-icon" style="background:#EBF4F5;color:#0C4A69"><span class="material-symbols-outlined">check_circle</span></div>
                 <div class="anatomy-content">
                   <div class="anatomy-title">Have you completed at least 3 real tasks with Claude?</div>
                   <div class="anatomy-desc">Not tutorials or experiments — actual work that shipped or informed a decision. Prototypes, components, documentation, audits.</div>
                 </div>
               </div>
               <div class="anatomy-item">
-                <div class="anatomy-icon" style="background:#EBF4F5;color:#0C4A69"><span class="material-symbols-outlined">check_circle</span></div>
                 <div class="anatomy-content">
                   <div class="anatomy-title">Do you have a CLAUDE.md file?</div>
                   <div class="anatomy-desc">Even a basic one. It doesn't need to be perfect — it needs to exist and contain your project context, design system references, and key conventions.</div>
@@ -4369,24 +4353,21 @@ For each issue found, provide:
               </div>
             </div>
 
-            <h3 class="subsection-heading" style="margin-top:32px">By day 60</h3>
+            <h3 class="subsection-heading" style="margin-top:32px;color:#466B11">By day 60</h3>
             <div class="anatomy-list">
               <div class="anatomy-item">
-                <div class="anatomy-icon" style="background:#F4FAEB;color:#466B11"><span class="material-symbols-outlined">check_circle</span></div>
                 <div class="anatomy-content">
                   <div class="anatomy-title">Is Claude your default starting point for at least one task type?</div>
                   <div class="anatomy-desc">You reach for Claude before opening Figma or writing code by hand for prototyping, documentation, or component generation.</div>
                 </div>
               </div>
               <div class="anatomy-item">
-                <div class="anatomy-icon" style="background:#F4FAEB;color:#466B11"><span class="material-symbols-outlined">check_circle</span></div>
                 <div class="anatomy-content">
                   <div class="anatomy-title">Have you created at least one custom skill?</div>
                   <div class="anatomy-desc">A reusable command that encodes your process — design review, component generation, accessibility audit. Something you use more than once.</div>
                 </div>
               </div>
               <div class="anatomy-item">
-                <div class="anatomy-icon" style="background:#F4FAEB;color:#466B11"><span class="material-symbols-outlined">check_circle</span></div>
                 <div class="anatomy-content">
                   <div class="anatomy-title">Can you articulate when AI helps and when it doesn't?</div>
                   <div class="anatomy-desc">You have opinions based on experience, not theory. You've tried AI on tasks where it didn't add value and you know why.</div>
@@ -4394,24 +4375,21 @@ For each issue found, provide:
               </div>
             </div>
 
-            <h3 class="subsection-heading" style="margin-top:32px">By day 90</h3>
+            <h3 class="subsection-heading" style="margin-top:32px;color:#805AA1">By day 90</h3>
             <div class="anatomy-list">
               <div class="anatomy-item">
-                <div class="anatomy-icon" style="background:#F8F0FC;color:#805AA1"><span class="material-symbols-outlined">check_circle</span></div>
                 <div class="anatomy-content">
                   <div class="anatomy-title">Have you helped a colleague get started?</div>
                   <div class="anatomy-desc">Pairing on a first session, sharing a skill, or walking someone through your workflow. Teaching is the strongest signal that you've internalized the tool.</div>
                 </div>
               </div>
               <div class="anatomy-item">
-                <div class="anatomy-icon" style="background:#F8F0FC;color:#805AA1"><span class="material-symbols-outlined">check_circle</span></div>
                 <div class="anatomy-content">
                   <div class="anatomy-title">Is your team sharing skills or CLAUDE.md fragments?</div>
                   <div class="anatomy-desc">Individual adoption is good. Team adoption is transformative. Shared infrastructure means everyone benefits from everyone else's learning.</div>
                 </div>
               </div>
               <div class="anatomy-item">
-                <div class="anatomy-icon" style="background:#F8F0FC;color:#805AA1"><span class="material-symbols-outlined">check_circle</span></div>
                 <div class="anatomy-content">
                   <div class="anatomy-title">Has your workflow measurably changed?</div>
                   <div class="anatomy-desc">You can point to specific time reallocations: less time on production, more time on critique and direction. The shift is visible in how you spend your weeks.</div>
@@ -4433,7 +4411,7 @@ For each issue found, provide:
           <!-- Team culture -->
           <div class="explainer-section" id="adopt-culture">
             <span class="explainer-label">Team Dynamics</span>
-            <h2 class="section-heading" style="margin-top:8px">Team culture</h2>
+            <h2 class="section-heading">Team culture</h2>
             <p class="explainer-lead">Individual adoption is necessary but insufficient. What makes AI stick on a team is culture — the norms, behaviors, and psychological conditions that make experimentation feel safe.</p>
 
             <div class="concept-grid">
@@ -4471,7 +4449,7 @@ For each issue found, provide:
           <!-- Sharing and skill libraries -->
           <div class="explainer-section" id="adopt-sharing">
             <span class="explainer-label">Infrastructure</span>
-            <h2 class="section-heading" style="margin-top:8px">Sharing and skill libraries</h2>
+            <h2 class="section-heading">Sharing and skill libraries</h2>
             <p class="explainer-lead">Individual prompt collections plateau quickly. Shared skill libraries compound — every contribution makes the whole team faster. But they only work if they're small, trusted, and actually used.</p>
 
             <div class="anatomy-list anatomy-list--with-icons">
@@ -4510,7 +4488,7 @@ For each issue found, provide:
           <!-- Leading AI adoption -->
           <div class="explainer-section" id="adopt-leading">
             <span class="explainer-label">For Leads</span>
-            <h2 class="section-heading" style="margin-top:8px">Leading AI adoption</h2>
+            <h2 class="section-heading">Leading AI adoption</h2>
             <p class="explainer-lead">If you manage a design team, adoption is your responsibility — not because you mandate it, but because you create the conditions for it. Here's what works and what backfires.</p>
 
             <h3 class="subsection-heading">What leaders should do</h3>
@@ -4602,7 +4580,7 @@ For each issue found, provide:
 
           <div class="explainer-section" id="mr-overview">
             <span class="explainer-label">Why this matters</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">When to use this workflow</h2>
+            <h2 class="section-heading">When to use this workflow</h2>
             <p class="explainer-lead">Competitive research is one of the highest-leverage activities a designer can do — and one of the least done. Not because it isn't valuable, but because it takes too long. Claude changes the economics of research. What took days now takes minutes.</p>
             <div class="concept-grid">
               <div class="concept-card">
@@ -4630,7 +4608,7 @@ For each issue found, provide:
 
           <div class="explainer-section" id="mr-define">
             <span class="explainer-label">Step 1</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Define the research scope</h2>
+            <h2 class="section-heading">Define the research scope</h2>
             <p class="explainer-lead">The quality of your competitive research is directly proportional to the quality of your brief. Before you prompt Claude, get clear on four things: product category, target user segments, core job-to-be-done, and constraints like geography and company size.</p>
             <div class="code-block"><pre><code>I'm a product designer working on a cloud data management platform. Our primary users are data engineers and analytics engineers at enterprise companies (1000+ employees).
 
@@ -4648,7 +4626,7 @@ Help me map the key players, their design approaches, and where users are curren
 
           <div class="explainer-section" id="mr-competitors">
             <span class="explainer-label">Step 2</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Map the competitive landscape</h2>
+            <h2 class="section-heading">Map the competitive landscape</h2>
             <p class="explainer-lead">Have Claude build out the landscape across distinct competitor categories. You're not just competing with other platforms — you're competing with dbt tests, custom scripts, and spreadsheets people built because nothing else solved the problem.</p>
             <div class="concept-grid">
               <div class="concept-card">
@@ -4741,7 +4719,7 @@ Help me map the key players, their design approaches, and where users are curren
 
           <div class="explainer-section" id="mr-needs">
             <span class="explainer-label">Step 3</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Identify unmet needs</h2>
+            <h2 class="section-heading">Identify unmet needs</h2>
             <p class="explainer-lead">The competitive landscape tells you what exists. Unmet needs tell you what's missing — and that's where your design opportunity lives. Have Claude synthesize pain points ranked by frequency and severity across the landscape.</p>
             <div class="anatomy-list">
               <div class="anatomy-item">
@@ -4835,7 +4813,7 @@ Help me map the key players, their design approaches, and where users are curren
 
           <div class="explainer-section" id="mr-differentiation">
             <span class="explainer-label">Step 4</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Find design differentiators</h2>
+            <h2 class="section-heading">Find design differentiators</h2>
             <p class="explainer-lead">Not feature gaps — experience gaps. Every competitor has a data health dashboard. The feature exists everywhere. But if none of them help users understand what to do when something goes wrong, that's an experience gap — and closing it is a design differentiator.</p>
             <div class="concept-grid">
               <div class="concept-card">
@@ -4888,7 +4866,7 @@ Then tell me: where do the two analyses disagree? Which gaps would users
 
           <div class="explainer-section" id="mr-report">
             <span class="explainer-label">Step 5</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Synthesize into a research report</h2>
+            <h2 class="section-heading">Synthesize into a research report</h2>
             <p class="explainer-lead">Have Claude produce a structured, shareable artifact: executive summary, competitive landscape matrix, user pain points, differentiation opportunities, and design recommendations. Claude can generate this as a standalone HTML page using your design system for a polished presentation.</p>
             <div class="code-block"><pre><code>Synthesize everything into a competitive research report with these sections:
 
@@ -4903,7 +4881,7 @@ Generate this as a standalone HTML page using our design system tokens. Include 
 
           <div class="explainer-section" id="mr-tips">
             <span class="explainer-label">Working effectively</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Getting reliable research from Claude</h2>
+            <h2 class="section-heading">Getting reliable research from Claude</h2>
             <p class="explainer-lead">Competitive research is where Claude is most useful and most dangerous. Synthesis across a broad landscape is exactly what LLMs excel at — but confident-sounding analysis that's wrong can be worse than no analysis at all.</p>
             <div class="callout callout--warning">
               <span class="material-symbols-outlined callout__icon">error_outline</span>
@@ -4953,7 +4931,7 @@ Generate this as a standalone HTML page using our design system tokens. Include 
 
           <div class="explainer-section" id="cd-overview">
             <span class="explainer-label">Overview</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">When to use this workflow</h2>
+            <h2 class="section-heading">When to use this workflow</h2>
             <p class="explainer-lead">Use concept design when you're starting a new feature, rethinking an existing flow, or exploring a new product area. This workflow takes you from a fuzzy problem to a concrete direction with rationale.</p>
             <div class="concept-grid">
               <div class="concept-card">
@@ -4976,7 +4954,7 @@ Generate this as a standalone HTML page using our design system tokens. Include 
 
           <div class="explainer-section" id="cd-problem">
             <span class="explainer-label">Phase 1</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Define the problem space</h2>
+            <h2 class="section-heading">Define the problem space</h2>
             <p class="explainer-lead">The quality of your problem definition determines the quality of everything after it. A vague brief produces generic concepts. A sharp brief produces concepts you can actually evaluate.</p>
             <p>Your problem statement should answer four questions: Who is the user? What are they trying to do? What's broken or missing today? What constraints exist?</p>
             <div class="code-block"><pre><code>I'm designing a new policy violation triage experience for our data security platform.
@@ -4998,7 +4976,7 @@ Help me think through this problem space. What are the key design tensions?</cod
 
           <div class="explainer-section" id="cd-research">
             <span class="explainer-label">Phase 2</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Gather inputs</h2>
+            <h2 class="section-heading">Gather inputs</h2>
             <p class="explainer-lead">This phase isn't about doing new research — it's about arming Claude with everything you already know. Claude is exceptionally good at synthesizing scattered inputs into a coherent picture.</p>
             <div class="concept-grid">
               <div class="concept-card">
@@ -5026,7 +5004,7 @@ Help me think through this problem space. What are the key design tensions?</cod
 
           <div class="explainer-section" id="cd-flows">
             <span class="explainer-label">Phase 3</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Generate user flows</h2>
+            <h2 class="section-heading">Generate user flows</h2>
             <p class="explainer-lead">Have Claude produce 2-3 task flow variants for the core user journey. Each flow should answer: what screens does the user see, what decisions do they make, and where are the anxiety points?</p>
             <div class="compare-grid">
               <div class="compare-card compare-card--b">
@@ -5092,7 +5070,7 @@ Flow B — "The Queue" (system-prioritized)
 
           <div class="explainer-section" id="cd-concepts">
             <span class="explainer-label">Phase 4</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Produce 3 concepts</h2>
+            <h2 class="section-heading">Produce 3 concepts</h2>
             <p class="explainer-lead">The key is three distinct approaches — not three visual skins on the same structure. You need concepts that differ in information hierarchy, interaction model, and progressive disclosure strategy.</p>
             <div class="code-block"><pre><code>Build 3 concept prototypes for the violation triage experience.
 
@@ -5112,7 +5090,7 @@ For each: use design system tokens, make it interactive enough to click through,
 
           <div class="explainer-section" id="cd-evaluate">
             <span class="explainer-label">Phase 5</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Evaluate concepts</h2>
+            <h2 class="section-heading">Evaluate concepts</h2>
             <p class="explainer-lead">Use a structured rubric to compare concepts. Claude can generate the evaluation matrix — but your judgment drives the final call.</p>
             <div class="key-principles">
               <div class="principle-card">
@@ -5200,7 +5178,7 @@ For each: use design system tokens, make it interactive enough to click through,
 
           <div class="explainer-section" id="cd-select">
             <span class="explainer-label">Phase 6</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Select and document</h2>
+            <h2 class="section-heading">Select and document</h2>
             <p class="explainer-lead">Write up the chosen direction with rationale in DESIGN.md. Capture what was explored, what was rejected and why, and what the selected concept does well. This document becomes the brief for prototyping or handoff.</p>
             <p class="example-label">Example: DESIGN.md concept selection document</p>
             <div class="code-block">
@@ -5244,7 +5222,7 @@ overhead while keeping the analyst in full control of each decision.
 
           <div class="explainer-section" id="cd-tips">
             <span class="explainer-label">Practical advice</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Making concept design work</h2>
+            <h2 class="section-heading">Making concept design work</h2>
             <p class="explainer-lead">Concept design with Claude works best when you treat it as a series of focused phases — not a single marathon prompt.</p>
             <div class="key-principles">
               <div class="principle-card">
@@ -5294,7 +5272,7 @@ overhead while keeping the analyst in full control of each decision.
 
           <div class="explainer-section" id="dsc-overview">
             <span class="explainer-label">Starting Point</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">When to use this workflow</h2>
+            <h2 class="section-heading">When to use this workflow</h2>
             <p class="explainer-lead">This workflow is for the moments when the cost of not having a component — inconsistency, duplicated effort, diverging implementations — exceeds the cost of building and maintaining one.</p>
             <div class="concept-grid">
               <div class="concept-card">
@@ -5317,7 +5295,7 @@ overhead while keeping the analyst in full control of each decision.
 
           <div class="explainer-section" id="dsc-audit">
             <span class="explainer-label">Step 1</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Audit existing usage</h2>
+            <h2 class="section-heading">Audit existing usage</h2>
             <p class="explainer-lead">Have Claude scan the codebase and build a catalog of every place this pattern appears — with all its inconsistencies exposed. The audit becomes evidence for why a component is needed and reveals the full scope of requirements.</p>
             <div class="code-block"><pre><code>Search the codebase for every instance of a "status badge" pattern. For each instance, catalog: file path, HTML element used, CSS classes, states handled, spacing values, color values, and whether it's interactive. Then summarize inconsistencies between implementations.</code></pre></div>
             <p class="example-label">Example: Audit reveals inconsistencies across 5 implementations</p>
@@ -5381,7 +5359,7 @@ overhead while keeping the analyst in full control of each decision.
 
           <div class="explainer-section" id="dsc-spec">
             <span class="explainer-label">Step 2</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Write the component spec</h2>
+            <h2 class="section-heading">Write the component spec</h2>
             <p class="explainer-lead">The spec is the design decision. Everything after this point is execution. Define every prop, every variant, every state, every responsive breakpoint, every accessibility requirement, and every token mapping.</p>
             <div class="key-principles">
               <div class="principle-card">
@@ -5464,7 +5442,7 @@ overhead while keeping the analyst in full control of each decision.
 
           <div class="explainer-section" id="dsc-build">
             <span class="explainer-label">Step 3</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Generate the component</h2>
+            <h2 class="section-heading">Generate the component</h2>
             <p class="explainer-lead">Build iteratively — structure first, then styling, then states, then interactions. Verify token usage at each step before moving to the next.</p>
             <div class="anatomy-list">
               <div class="anatomy-item">
@@ -5500,14 +5478,14 @@ overhead while keeping the analyst in full control of each decision.
 
           <div class="explainer-section" id="dsc-review">
             <span class="explainer-label">Step 4</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Review and validate</h2>
+            <h2 class="section-heading">Review and validate</h2>
             <p class="explainer-lead">Review is not "does it look right." It's a systematic check against your spec, your token system, accessibility requirements, and sibling components.</p>
             <p>Check: token compliance (zero hardcoded values), semantic HTML, ARIA and keyboard behavior, responsive behavior at all breakpoints, sibling consistency, and naming conventions.</p>
           </div>
 
           <div class="explainer-section" id="dsc-document">
             <span class="explainer-label">Step 5</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Generate documentation</h2>
+            <h2 class="section-heading">Generate documentation</h2>
             <p class="explainer-lead">Good docs prevent misuse. Bad docs guarantee it. Documentation should include: when to use (and when NOT to use), prop table, visual examples per variant and state, and code snippets for common patterns.</p>
             <div class="compare-grid">
               <div class="compare-card compare-card--a">
@@ -5547,7 +5525,7 @@ overhead while keeping the analyst in full control of each decision.
 
           <div class="explainer-section" id="dsc-tips">
             <span class="explainer-label">Best Practices</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Maintaining system quality</h2>
+            <h2 class="section-heading">Maintaining system quality</h2>
             <p class="explainer-lead">A design system is only as good as its worst component.</p>
             <div class="key-principles">
               <div class="principle-card">
@@ -5583,14 +5561,14 @@ overhead while keeping the analyst in full control of each decision.
 
           <div class="explainer-section" id="pv-overview">
             <span class="explainer-label">Purpose</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">When to use this workflow</h2>
+            <h2 class="section-heading">When to use this workflow</h2>
             <p class="explainer-lead">Use this workflow when you need to validate an interaction model, test a flow hypothesis, demonstrate behavior to stakeholders, or answer a question that static mockups can't answer.</p>
             <p>Code prototypes are fundamentally different from Figma prototypes. They demonstrate real behavior — filtering that actually filters, forms that track state, tables that sort and paginate.</p>
           </div>
 
           <div class="explainer-section" id="pv-hypothesis">
             <span class="explainer-label">Foundation</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Define what you're validating</h2>
+            <h2 class="section-heading">Define what you're validating</h2>
             <p class="explainer-lead">Every prototype should answer a specific question. Not "build me the settings page" but "can a user configure pipeline permissions in under 3 clicks?"</p>
             <div class="compare-grid">
               <div class="compare-card compare-card--b">
@@ -5631,7 +5609,7 @@ overhead while keeping the analyst in full control of each decision.
 
           <div class="explainer-section" id="pv-scope">
             <span class="explainer-label">Fidelity</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Scope the fidelity</h2>
+            <h2 class="section-heading">Scope the fidelity</h2>
             <p class="explainer-lead">Not every prototype needs to look production-ready. Most should land at mid-fidelity — styled enough to feel real, not so polished that feedback fixates on visual details.</p>
             <div class="concept-grid">
               <div class="concept-card">
@@ -5654,7 +5632,7 @@ overhead while keeping the analyst in full control of each decision.
 
           <div class="explainer-section" id="pv-build">
             <span class="explainer-label">Construction</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Build the prototype</h2>
+            <h2 class="section-heading">Build the prototype</h2>
             <p class="explainer-lead">Prompt Claude with the validation question, constraints, real data structures, and every state. Build screen by screen — verify each before moving to the next.</p>
             <div class="code-block"><pre><code>I'm testing this hypothesis: users can configure row-level security policies in under 4 steps using a guided flow.
 
@@ -5704,7 +5682,7 @@ Data: use realistic names — "customer_orders", "payment_transactions",
 
           <div class="explainer-section" id="pv-test">
             <span class="explainer-label">Validation</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Test and walk through</h2>
+            <h2 class="section-heading">Test and walk through</h2>
             <p class="explainer-lead">Verify across breakpoints, click through every path (not just the happy path), capture screenshots at decision points, and run a stakeholder walkthrough. The prototype is a conversation tool, not a deliverable.</p>
             <p class="example-label">Example walkthrough checklist — Data health dashboard</p>
             <div class="sds-table-container">
@@ -5780,13 +5758,13 @@ Data: use realistic names — "customer_orders", "payment_transactions",
 
           <div class="explainer-section" id="pv-document">
             <span class="explainer-label">Capture</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Document the decision</h2>
+            <h2 class="section-heading">Document the decision</h2>
             <p class="explainer-lead">The prototype is disposable. The insight it generated is permanent. Record what you validated or invalidated, what surprised you, and what carries forward into production. Add it to DESIGN.md.</p>
           </div>
 
           <div class="explainer-section" id="pv-tips">
             <span class="explainer-label">Principles</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Prototyping principles</h2>
+            <h2 class="section-heading">Prototyping principles</h2>
             <p class="explainer-lead">These principles keep prototyping fast, focused, and valuable.</p>
             <div class="key-principles">
               <div class="principle-card">
@@ -5836,7 +5814,7 @@ Data: use realistic names — "customer_orders", "payment_transactions",
 
           <div class="explainer-section" id="uxe-overview">
             <span class="explainer-label">Purpose</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">When to use this workflow</h2>
+            <h2 class="section-heading">When to use this workflow</h2>
             <p class="explainer-lead">Evaluation is the highest-leverage design skill. Knowing what to fix matters far more than knowing how to build. This workflow turns Claude into a systematic audit partner.</p>
             <div class="concept-grid">
               <div class="concept-card">
@@ -5864,7 +5842,7 @@ Data: use realistic names — "customer_orders", "payment_transactions",
 
           <div class="explainer-section" id="uxe-scope">
             <span class="explainer-label">Step 1</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Scope the audit</h2>
+            <h2 class="section-heading">Scope the audit</h2>
             <p class="explainer-lead">Define exactly what you're evaluating and what criteria you're measuring against. Trying to audit an entire product at once produces shallow findings. Narrow scope produces actionable depth.</p>
             <div class="code-block"><pre><code>Read the components in /src/pages/PipelineBuilder/ and evaluate the "create new pipeline" flow against Nielsen's 10 usability heuristics.
 
@@ -5882,7 +5860,7 @@ Output as a structured table.</code></pre></div>
 
           <div class="explainer-section" id="uxe-inventory">
             <span class="explainer-label">Step 2</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Capture the current state</h2>
+            <h2 class="section-heading">Capture the current state</h2>
             <p class="explainer-lead">Have Claude read the code and produce a structured inventory: components used, layout patterns, states handled, and — most importantly — states missing. Claude spots gaps you've gone blind to.</p>
             <p class="example-label">Example: State inventory for "Create Pipeline" flow</p>
             <div class="sds-table-container">
@@ -5932,7 +5910,7 @@ Output as a structured table.</code></pre></div>
 
           <div class="explainer-section" id="uxe-heuristic">
             <span class="explainer-label">Step 3</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Heuristic walkthrough</h2>
+            <h2 class="section-heading">Heuristic walkthrough</h2>
             <p class="explainer-lead">The core of the evaluation — a structured, multi-pass review. The 3-pass pattern: evaluate and rate, fix critical issues, then re-evaluate to verify fixes and catch regressions.</p>
             <div class="anatomy-list">
               <div class="anatomy-item">
@@ -6033,7 +6011,7 @@ Output as a structured table.</code></pre></div>
 
           <div class="explainer-section" id="uxe-accessibility">
             <span class="explainer-label">Step 4</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Accessibility audit</h2>
+            <h2 class="section-heading">Accessibility audit</h2>
             <p class="explainer-lead">Separate from heuristic walkthrough because it uses different criteria (WCAG 2.1 AA). Same 3-pass structure. Cover: contrast ratios, keyboard navigation, ARIA attributes, focus management, and screen reader announcements.</p>
             <div class="callout callout--warning">
               <span class="material-symbols-outlined callout__icon">error_outline</span>
@@ -6046,7 +6024,7 @@ Output as a structured table.</code></pre></div>
 
           <div class="explainer-section" id="uxe-improvements">
             <span class="explainer-label">Step 5</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Prioritize improvements</h2>
+            <h2 class="section-heading">Prioritize improvements</h2>
             <p class="explainer-lead">Group findings by theme, use an impact/effort matrix, and have Claude propose design alternatives for the top issues. You decide what to fix — Claude surfaces options.</p>
             <div class="concept-grid">
               <div class="concept-card">
@@ -6074,7 +6052,7 @@ Output as a structured table.</code></pre></div>
 
           <div class="explainer-section" id="uxe-report">
             <span class="explainer-label">Step 6</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Document and share</h2>
+            <h2 class="section-heading">Document and share</h2>
             <p class="explainer-lead">Produce a structured evaluation report with findings grouped by theme, severity ratings, and a prioritized action plan. This is the artifact that transforms "this feels wrong" into evidence engineering can act on.</p>
             <div class="compare-grid">
               <div class="compare-card compare-card--a">
@@ -6106,7 +6084,7 @@ Output as a structured table.</code></pre></div>
 
           <div class="explainer-section" id="ho-overview">
             <span class="explainer-label">Why this workflow</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">When to use this workflow</h2>
+            <h2 class="section-heading">When to use this workflow</h2>
             <p class="explainer-lead">Handoff is where design quality either survives or dies. The gap between your Figma file and what ships is almost never about wrong colors — it's about the states, behaviors, and edge cases that never got documented.</p>
             <div class="concept-grid">
               <div class="concept-card">
@@ -6134,7 +6112,7 @@ Output as a structured table.</code></pre></div>
 
           <div class="explainer-section" id="ho-completeness">
             <span class="explainer-label">Step 1</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Audit completeness</h2>
+            <h2 class="section-heading">Audit completeness</h2>
             <p class="explainer-lead">Have Claude review your component and produce a gap analysis across five dimensions: visual states, data states, responsive behavior, accessibility, and edge cases.</p>
             <p class="example-label">Example: Gap analysis for DataTable component</p>
             <div class="sds-table-container">
@@ -6179,7 +6157,7 @@ Output as a structured table.</code></pre></div>
 
           <div class="explainer-section" id="ho-states">
             <span class="explainer-label">Step 2</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Generate a state inventory</h2>
+            <h2 class="section-heading">Generate a state inventory</h2>
             <p class="explainer-lead">For every interactive element, enumerate every possible state. Claude is exceptionally good at exhaustive enumeration — much better than a designer working from memory who naturally thinks about the happy path first.</p>
             <div class="callout callout--warning">
               <span class="material-symbols-outlined callout__icon">error_outline</span>
@@ -6231,7 +6209,7 @@ loading + error       → Cannot occur. Validation only runs post-load.</code></
 
           <div class="explainer-section" id="ho-interactions">
             <span class="explainer-label">Step 3</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Write interaction specifications</h2>
+            <h2 class="section-heading">Write interaction specifications</h2>
             <p class="explainer-lead">Developers don't struggle with pixel measurements — design tokens handle that. They need behavior descriptions: what happens on click, hover, escape, outside-click, tab, and screen reader focus.</p>
             <div class="callout callout--insight">
               <span class="material-symbols-outlined callout__icon">bookmark</span>
@@ -6299,7 +6277,7 @@ SCOPE:     Editable text cells within a data table row
 
           <div class="explainer-section" id="ho-edge-cases">
             <span class="explainer-label">Step 4</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Document edge cases</h2>
+            <h2 class="section-heading">Document edge cases</h2>
             <p class="explainer-lead">In data management SaaS, edge cases aren't edge cases — they're the product. Zero rows, 10,000 rows, 500-character column values, partial permissions, network drops mid-save.</p>
             <div class="concept-grid">
               <div class="concept-card">
@@ -6327,7 +6305,7 @@ SCOPE:     Editable text cells within a data table row
 
           <div class="explainer-section" id="ho-brief">
             <span class="explainer-label">Step 5</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Create the developer brief</h2>
+            <h2 class="section-heading">Create the developer brief</h2>
             <p class="explainer-lead">Consolidate everything into a single DESIGN.md: component purpose, props/API, token usage, state inventory, interaction specs, accessibility requirements, and edge cases.</p>
             <div class="compare-grid">
               <div class="compare-card compare-card--a">
@@ -6345,7 +6323,7 @@ SCOPE:     Editable text cells within a data table row
 
           <div class="explainer-section" id="ho-tips">
             <span class="explainer-label">Make it stick</span>
-            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Handoff that sticks</h2>
+            <h2 class="section-heading">Handoff that sticks</h2>
             <p class="explainer-lead">A spec nobody reads is worse than no spec — it gives the illusion that engineering has what they need.</p>
             <div class="key-principles">
               <div class="principle-card">
@@ -8768,6 +8746,18 @@ function init() {
 }
 
 init();
+
+// Scroll progress bar
+const mainEl = document.getElementById('main-scroll');
+const progressBar = document.getElementById('scroll-progress');
+if (mainEl && progressBar) {
+  mainEl.addEventListener('scroll', function() {
+    const scrollTop = mainEl.scrollTop;
+    const scrollHeight = mainEl.scrollHeight - mainEl.clientHeight;
+    const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    progressBar.style.width = progress + '%';
+  });
+}
 </script>
 
 </body>
