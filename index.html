@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>XD Claude Learning</title>
+  <title>Claude Learning for XD</title>
   <link rel="stylesheet" href="tokens/colors.css">
   <link rel="stylesheet" href="tokens/spacing.css">
   <link rel="stylesheet" href="tokens/typography.css">
@@ -1920,7 +1920,7 @@
     <!-- Top Navigation -->
     <nav class="sds-topnav">
       <button class="sds-topnav-logo" onclick="showPage('home')">
-        <span class="sds-topnav-logo-text">XD Claude Learning</span>
+        <span class="sds-topnav-logo-text">Claude Learning for XD</span>
       </button>
       <div class="sds-topnav-links">
         <button class="sds-topnav-link is-active" data-page="home" onclick="showPage('home')">Home</button>
@@ -2984,7 +2984,7 @@ explicitly specified.</code></pre></div>
               <span class="material-symbols-outlined callout__icon">error_outline</span>
               <div class="callout__body">
                 <div class="callout__title">When Claude Code is the wrong tool</div>
-                <div class="callout__text">Don't force everything through Claude. <strong>Stay in Figma</strong> for: early-stage ideation and blue-sky exploration, complex illustration and visual design, user flow mapping and journey diagramming, stakeholder presentation decks, and anything where you need to sketch loosely before committing to structure. Claude Code excels at structured, systematic work — not freeform visual thinking.</div>
+                <div class="callout__text">Don't force everything through Claude. <strong>Stay in Figma</strong> for: complex illustration and visual design, user flow mapping and journey diagramming, stakeholder presentation decks, and anything where you need to sketch loosely before committing to structure. Claude Code excels at structured, systematic work — not freeform visual thinking. That said, Claude is surprisingly useful in early ideation for research, teasing out concepts, and pressure-testing assumptions before you start designing.</div>
               </div>
             </div>
           </div>
@@ -5985,7 +5985,7 @@ For each issue found, provide:
               <div class="compare-card compare-card--b">
                 <div class="compare-card__label">Low AI leverage</div>
                 <div class="compare-card__title">Visual, ambiguous, emotional</div>
-                <div class="compare-card__desc">Brand exploration, illustration and visual identity, early-stage ideation where the problem is unclear, stakeholder presentations, emotional design decisions, anything where "I'll know it when I see it" is the brief.</div>
+                <div class="compare-card__desc">Brand exploration, illustration and visual identity, stakeholder presentations, emotional design decisions, anything where "I'll know it when I see it" is the brief. Note: early-stage ideation is actually a strong use case for Claude — use it to research the problem space, synthesize patterns, and pressure-test concepts before committing to a direction.</div>
               </div>
             </div>
 
@@ -5994,6 +5994,83 @@ For each issue found, provide:
               <div class="callout__body">
                 <div class="callout__title">Verification beats creation</div>
                 <div class="callout__text">The highest-leverage moment for AI isn't generating new designs — it's checking your existing work. Ask Claude to audit your component for accessibility issues, verify token usage, check responsive behavior, or review spacing consistency. Verification compounds quality in ways that creation alone never does.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Session awareness -->
+          <div class="explainer-section" id="adopt-sessions">
+            <span class="explainer-label">Working Effectively</span>
+            <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Session awareness</h2>
+            <p class="explainer-lead">Claude sessions aren't infinite. Understanding how they work — and how they degrade — is one of the most practical things you can learn. It directly affects the quality of what you get back.</p>
+
+            <h3 class="subsection-heading">Context windows have limits</h3>
+            <p>Every Claude session has a <strong>context window</strong> — the total amount of information Claude can hold in memory at once. Think of it like a whiteboard: as the conversation grows, older content gets erased to make room for new content. Claude doesn't choose what to forget — earlier context simply falls off the edge.</p>
+            <p>This means a session that starts sharp can gradually lose track of decisions you made earlier. You might notice Claude re-asking questions you already answered, contradicting earlier choices, or forgetting constraints you established at the start.</p>
+
+            <div class="callout callout--warning" style="margin-top:var(--sds-space-600)">
+              <span class="material-symbols-outlined callout__icon">error_outline</span>
+              <div class="callout__body">
+                <div class="callout__title">Signs your session is degrading</div>
+                <div class="callout__text">Claude repeats suggestions you already rejected. It forgets design tokens or naming conventions you established. It starts contradicting decisions made earlier in the conversation. Output quality drops noticeably — responses feel more generic or less precise. These are all signals to start fresh.</div>
+              </div>
+            </div>
+
+            <h3 class="subsection-heading">Large tasks invite hallucinations</h3>
+            <p>When you ask Claude to tackle something too large in a single prompt — "build me a complete design system" or "create a full 10-page prototype" — the scope exceeds what it can hold in working memory. The result: Claude starts making things up. It will invent token names that don't exist, reference components it never built, or generate plausible-looking code that doesn't actually work.</p>
+            <p>This isn't Claude being unreliable — it's a predictable consequence of asking for too much at once. The fix is simple: <strong>break large tasks into smaller, sequential steps</strong>. Build one screen, verify it, then build the next. Create the token layer, confirm it, then apply it to components.</p>
+
+            <div class="compare-grid" style="margin-top:var(--sds-space-600)">
+              <div class="compare-card compare-card--b">
+                <div class="compare-card__label">Risky</div>
+                <div class="compare-card__title">One massive prompt</div>
+                <div class="compare-card__desc">"Build a complete payment flow with 5 screens, all interactive, with design tokens, transitions, loading states, error handling, and responsive behavior."</div>
+              </div>
+              <div class="compare-card compare-card--a">
+                <div class="compare-card__label">Reliable</div>
+                <div class="compare-card__title">Sequential steps with checkpoints</div>
+                <div class="compare-card__desc">"Build the balance screen first. Use these tokens. I'll review, then we'll move to the amount screen." Each step is verified before moving on.</div>
+              </div>
+            </div>
+
+            <h3 class="subsection-heading">Practical habits for session management</h3>
+
+            <div class="key-principles">
+              <div class="principle-card">
+                <div class="principle-card__number">1</div>
+                <div class="principle-card__content">
+                  <div class="principle-card__title">Use /compact deliberately</div>
+                  <div class="principle-card__desc">When a session gets long, use <code>/compact</code> to summarize and free up context space. Tell Claude what to keep: "Keep the token names, component structure, and spacing decisions. Drop the early exploration." This extends a session's useful life.</div>
+                </div>
+              </div>
+              <div class="principle-card">
+                <div class="principle-card__number">2</div>
+                <div class="principle-card__content">
+                  <div class="principle-card__title">Start fresh sessions for new tasks</div>
+                  <div class="principle-card__desc">Don't reuse a prototyping session for a documentation task. Each new task gets a clean session with a focused CLAUDE.md context. Starting fresh is cheap — debugging a confused session is expensive.</div>
+                </div>
+              </div>
+              <div class="principle-card">
+                <div class="principle-card__number">3</div>
+                <div class="principle-card__content">
+                  <div class="principle-card__title">Verify as you go, not at the end</div>
+                  <div class="principle-card__desc">Review Claude's output after each step, not after ten steps. Catching a hallucinated token name on step 2 is a quick fix. Catching it on step 10 means unwinding everything built on top of it.</div>
+                </div>
+              </div>
+              <div class="principle-card">
+                <div class="principle-card__number">4</div>
+                <div class="principle-card__content">
+                  <div class="principle-card__title">Write decisions down outside the session</div>
+                  <div class="principle-card__desc">Use CLAUDE.md and DESIGN.md to capture key decisions. These files persist across sessions — so when you start fresh, Claude reads them and picks up where you left off without you re-explaining everything.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="callout callout--tip" style="margin-top:var(--sds-space-600)">
+              <span class="material-symbols-outlined callout__icon">lightbulb</span>
+              <div class="callout__body">
+                <div class="callout__title">The 3-4 round rule</div>
+                <div class="callout__text">If you've gone 3-4 rounds of iteration on the same element and quality is declining rather than improving, stop iterating. Start a new session, paste in the current state of the file, and give Claude fresh context. You'll almost always get better results than pushing through a degraded session.</div>
               </div>
             </div>
           </div>
@@ -7843,6 +7920,7 @@ const secondaryNavConfigs = {
       { id: 'adopt-boundaries',   label: 'What stays human' },
       { id: 'adopt-before-after', label: 'How the workflow changes' },
       { id: 'adopt-when',         label: 'When to use what' },
+      { id: 'adopt-sessions',     label: 'Session awareness' },
       { id: 'adopt-milestones',   label: 'Confidence milestones' },
       { id: 'adopt-self-assess',  label: 'Self-assessment' },
       { id: 'adopt-culture',      label: 'Team culture' },
