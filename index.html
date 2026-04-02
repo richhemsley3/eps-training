@@ -6481,6 +6481,64 @@ Help me map the key players, their design approaches, and where users are curren
                 <div class="concept-card__desc">Often your real competition. Understanding why users choose DIY reveals what commercial products are getting wrong.</div>
               </div>
             </div>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example: Competitive landscape matrix</p>
+            <div class="sds-table-container">
+              <table class="sds-table">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Core Approach</th>
+                    <th>Strengths</th>
+                    <th>Gaps</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Monte Carlo</td>
+                    <td>Data Observability</td>
+                    <td>ML-driven anomaly detection across warehouses and lakes</td>
+                    <td>Broad warehouse coverage; automated lineage; strong brand recognition</td>
+                    <td>Alert noise at scale; limited root cause depth; costly per-table pricing</td>
+                  </tr>
+                  <tr>
+                    <td>Bigeye</td>
+                    <td>Data Observability</td>
+                    <td>Metric-based monitoring with autothresholds</td>
+                    <td>Granular metric control; fast deployment; developer-friendly API</td>
+                    <td>Requires manual tuning for complex schemas; weaker lineage story</td>
+                  </tr>
+                  <tr>
+                    <td>Great Expectations</td>
+                    <td>Data Quality Testing</td>
+                    <td>Open-source expectation suites embedded in pipelines</td>
+                    <td>Code-native; strong community; no vendor lock-in</td>
+                    <td>No monitoring layer; requires engineering effort to operationalize</td>
+                  </tr>
+                  <tr>
+                    <td>Atlan</td>
+                    <td>Data Catalog &amp; Governance</td>
+                    <td>Active metadata platform with embedded collaboration</td>
+                    <td>Modern UX; strong search and discovery; governance workflows</td>
+                    <td>Lightweight quality checks; not a primary observability tool</td>
+                  </tr>
+                  <tr>
+                    <td>Soda</td>
+                    <td>Data Quality Testing</td>
+                    <td>SodaCL checks defined as YAML contracts in CI/CD</td>
+                    <td>Shift-left testing; readable syntax; integrates into deployment pipelines</td>
+                    <td>No production monitoring; limited anomaly detection; smaller ecosystem</td>
+                  </tr>
+                  <tr>
+                    <td>Collibra</td>
+                    <td>Data Governance</td>
+                    <td>Enterprise governance platform with policy enforcement</td>
+                    <td>Deep compliance workflows; large enterprise install base; broad integrations</td>
+                    <td>Heavy implementation; slow time-to-value; quality features bolted on</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div class="callout callout--warning">
               <span class="material-symbols-outlined callout__icon">error_outline</span>
               <div class="callout__body">
@@ -6524,6 +6582,57 @@ Help me map the key players, their design approaches, and where users are curren
                 </div>
               </div>
             </div>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example: Pain point ranking by frequency × severity</p>
+            <div class="sds-table-container">
+              <table class="sds-table">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Pain Point</th>
+                    <th>Frequency</th>
+                    <th>Severity</th>
+                    <th>Signal Source</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Alert fatigue from noisy thresholds that erode team trust in monitoring</td>
+                    <td>Very High</td>
+                    <td>High</td>
+                    <td>G2 reviews; Reddit r/dataengineering; support tickets</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>No root cause guidance when data quality issues are detected</td>
+                    <td>High</td>
+                    <td>Very High</td>
+                    <td>Gartner inquiry data; sales call transcripts; community forums</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Schema changes in upstream sources break pipelines silently</td>
+                    <td>High</td>
+                    <td>High</td>
+                    <td>Stack Overflow; dbt Slack community; customer interviews</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Hours spent manually triaging which downstream dashboards are affected</td>
+                    <td>Medium</td>
+                    <td>High</td>
+                    <td>Customer interviews; analyst surveys; competitive win/loss notes</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Data quality rules are defined in code but invisible to business stakeholders</td>
+                    <td>Medium</td>
+                    <td>Medium</td>
+                    <td>Product feedback portals; analyst community posts; renewal calls</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div class="callout callout--tip">
               <span class="material-symbols-outlined callout__icon">lightbulb</span>
               <div class="callout__body">
@@ -6559,6 +6668,24 @@ Help me map the key players, their design approaches, and where users are curren
                 <div class="concept-card__desc">Competitors are reactive — they tell you when something broke. Differentiate by telling users when something is about to break.</div>
               </div>
             </div>
+            <div class="code-block"><pre><code>I'm building positioning for a data quality monitoring product. Analyze the gap
+between our product and [Competitor X] using two distinct lenses:
+
+**Experience gap analysis:**
+- Compare the end-to-end workflow for a data engineer who discovers a quality
+  issue at 2am. Map each step from alert → diagnosis → resolution → prevention.
+- Where does each product create friction, require context-switching, or leave
+  the user without guidance?
+- Identify moments where the user's confidence or frustration changes.
+
+**Feature gap analysis:**
+- Compare capabilities across: anomaly detection, lineage, root cause analysis,
+  notification routing, and incident management.
+- For each capability, note: which product has it, depth of implementation, and
+  whether it's core or bolted-on.
+
+Then tell me: where do the two analyses disagree? Which gaps would users
+*feel* most but might not articulate in a feature checklist?</code></pre></div>
             <div class="callout callout--insight">
               <span class="material-symbols-outlined callout__icon">bookmark</span>
               <div class="callout__body">
@@ -6722,6 +6849,47 @@ Help me think through this problem space. What are the key design tensions?</cod
                 <div class="compare-card__desc">Specifies the axis of variation. You might get: analyst-initiated scan, system-pushed queue, digest-first drill-down.</div>
               </div>
             </div>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example: Two flow variants generated from the same problem</p>
+            <div class="code-block">
+              <pre><code>Flow A — "The Scanner" (analyst-initiated)
+
+  Dashboard (severity heatmap)
+       │
+       ├── Filter by severity ──→ Select violation ──→ Detail panel
+       │                                                    │
+       │                                              ┌─────┴──────┐
+       │                                              │            │
+       │                                         Mark resolved   Escalate
+       │                                              │            │
+       │                                              ▼            ▼
+       │                                          Next item    Assign to
+       │                                                       team member
+       │
+       └── Bulk select ──→ Review selection ──→ Bulk resolve
+                                                    │
+                                                    ▼
+                                              Summary toast
+
+
+Flow B — "The Queue" (system-prioritized)
+
+  Prioritized queue (auto-ranked)
+       │
+       ▼
+  Top violation presented
+       │
+       ├── Quick context (policy, asset, history)
+       │
+       ├── Decision ─────────┬──────────────┐
+       │                     │              │
+       │                  Resolve       Escalate      Skip / Snooze
+       │                     │              │              │
+       │                     ▼              ▼              ▼
+       │                Auto-advance   Assign +       Queue later
+       │                to next item   add note       (with reason)
+       │
+       └── Progress bar (resolved / remaining / escalated)</code></pre>
+            </div>
             <div class="callout callout--warning">
               <span class="material-symbols-outlined callout__icon">error_outline</span>
               <div class="callout__body">
@@ -6792,12 +6960,88 @@ For each: use design system tokens, make it interactive enough to click through,
                 </div>
               </div>
             </div>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example: Evaluation matrix comparing three concepts</p>
+            <div class="sds-table-container">
+              <table class="sds-table">
+                <thead>
+                  <tr>
+                    <th>Criteria</th>
+                    <th>Concept A "Scanner"</th>
+                    <th>Concept B "Queue"</th>
+                    <th>Concept C "Briefing"</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>User alignment</td>
+                    <td><strong>Strong</strong> — matches analyst mental model of scanning and filtering</td>
+                    <td><strong>Strong</strong> — reduces decision fatigue with system-ranked priority</td>
+                    <td><strong>Moderate</strong> — useful for leads but adds overhead for individual analysts</td>
+                  </tr>
+                  <tr>
+                    <td>Feasibility</td>
+                    <td><strong>Strong</strong> — standard list/detail pattern, proven in existing codebase</td>
+                    <td><strong>Moderate</strong> — requires ranking algorithm and queue state management</td>
+                    <td><strong>Weak</strong> — depends on reliable summarization and cross-source aggregation</td>
+                  </tr>
+                  <tr>
+                    <td>Design system fit</td>
+                    <td><strong>Strong</strong> — uses existing table, filter, and panel components directly</td>
+                    <td><strong>Strong</strong> — card and action bar patterns already available</td>
+                    <td><strong>Moderate</strong> — needs new summary card and digest layout components</td>
+                  </tr>
+                  <tr>
+                    <td>Scalability</td>
+                    <td><strong>Moderate</strong> — filtering works at scale but scanning degrades past 200+ items</td>
+                    <td><strong>Strong</strong> — queue model handles volume by design, no manual scanning</td>
+                    <td><strong>Strong</strong> — digest format compresses high volume into actionable summaries</td>
+                  </tr>
+                  <tr>
+                    <td>Accessibility</td>
+                    <td><strong>Strong</strong> — familiar table navigation, keyboard-friendly filter controls</td>
+                    <td><strong>Strong</strong> — linear flow is screen-reader friendly, clear focus management</td>
+                    <td><strong>Moderate</strong> — dense summary layout needs careful heading structure and aria regions</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div class="explainer-section" id="cd-select">
             <span class="explainer-label">Phase 6</span>
             <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Select and document</h2>
             <p class="explainer-lead">Write up the chosen direction with rationale in DESIGN.md. Capture what was explored, what was rejected and why, and what the selected concept does well. This document becomes the brief for prototyping or handoff.</p>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example: DESIGN.md concept selection document</p>
+            <div class="code-block">
+              <pre><code># DESIGN.md — Violation Triage: Concept Selection
+
+## Chosen direction
+**Concept B: "The Queue"** — system-prioritized triage workflow
+
+## Rationale
+The queue model best addresses the core problem: analysts waste time
+deciding *what* to look at before deciding *what to do about it*.
+Auto-ranking by severity, recency, and policy scope removes that
+overhead while keeping the analyst in full control of each decision.
+
+## What was explored
+- **Concept A "Scanner"**: analyst-driven filter/browse model
+- **Concept B "Queue"**: system-prioritized linear triage
+- **Concept C "Briefing"**: daily digest with summarized clusters
+
+## What was rejected and why
+- **Scanner**: strong DS fit but degrades past 200 items; shifts
+  prioritization burden to the analyst.
+- **Briefing**: promising for leadership views but adds latency,
+  requires summarization infra we don't have, and scored weakest
+  on feasibility and accessibility.
+
+## Key design decisions
+- Queue rank algorithm is transparent — sort rationale shown per item
+- Analysts can override priority (skip/snooze) without losing items
+- Progress indicator maintains momentum and supports shift handoff
+- Will reuse Concept A's detail panel for the violation inspect view</code></pre>
+            </div>
             <div class="callout callout--insight">
               <span class="material-symbols-outlined callout__icon">bookmark</span>
               <div class="callout__body">
@@ -6885,6 +7129,63 @@ For each: use design system tokens, make it interactive enough to click through,
             <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Audit existing usage</h2>
             <p class="explainer-lead">Have Claude scan the codebase and build a catalog of every place this pattern appears — with all its inconsistencies exposed. The audit becomes evidence for why a component is needed and reveals the full scope of requirements.</p>
             <div class="code-block"><pre><code>Search the codebase for every instance of a "status badge" pattern. For each instance, catalog: file path, HTML element used, CSS classes, states handled, spacing values, color values, and whether it's interactive. Then summarize inconsistencies between implementations.</code></pre></div>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example: Audit reveals inconsistencies across 5 implementations</p>
+            <div class="sds-table-container">
+              <table class="sds-table">
+                <thead>
+                  <tr>
+                    <th>Location</th>
+                    <th>CSS Classes</th>
+                    <th>Background</th>
+                    <th>Text Color</th>
+                    <th>Border Radius</th>
+                    <th>Padding</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>PipelineList.tsx:42</td>
+                    <td><code>.badge-success</code></td>
+                    <td><code>#22c55e</code></td>
+                    <td><code>#ffffff</code></td>
+                    <td><code>4px</code></td>
+                    <td><code>2px 8px</code></td>
+                  </tr>
+                  <tr>
+                    <td>JobDetail.tsx:118</td>
+                    <td><code>.status-pill</code></td>
+                    <td><code>rgba(34,197,94,0.15)</code></td>
+                    <td><code>#16a34a</code></td>
+                    <td><code>999px</code></td>
+                    <td><code>4px 12px</code></td>
+                  </tr>
+                  <tr>
+                    <td>RunHistory.tsx:67</td>
+                    <td><code>.tag.tag--green</code></td>
+                    <td><code>#dcfce7</code></td>
+                    <td><code>#15803d</code></td>
+                    <td><code>6px</code></td>
+                    <td><code>3px 10px</code></td>
+                  </tr>
+                  <tr>
+                    <td>AlertPanel.tsx:205</td>
+                    <td><code>.label-ok</code></td>
+                    <td><code>#4ade80</code></td>
+                    <td><code>#052e16</code></td>
+                    <td><code>2px</code></td>
+                    <td><code>1px 6px</code></td>
+                  </tr>
+                  <tr>
+                    <td>Dashboard.tsx:89</td>
+                    <td><code>.chip.chip--active</code></td>
+                    <td><code>#bbf7d0</code></td>
+                    <td><code>#166534</code></td>
+                    <td><code>8px</code></td>
+                    <td><code>4px 16px</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div class="explainer-section" id="dsc-spec">
@@ -6934,6 +7235,39 @@ For each: use design system tokens, make it interactive enough to click through,
                 <div class="callout__title">If Claude has to guess, it will guess wrong</div>
                 <div class="callout__text">Vague specs like "should look good on mobile" produce vague implementations. State exactly what changes at each breakpoint and what each state looks like.</div>
               </div>
+            </div>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example: StatusBadge component spec</p>
+            <div class="code-block">
+              <pre><code>## StatusBadge
+
+### Variants
+  success  → bg: --sds-color-green-100   text: --sds-color-green-800
+  warning  → bg: --sds-color-amber-100   text: --sds-color-amber-800
+  error    → bg: --sds-color-red-100     text: --sds-color-red-800
+  info     → bg: --sds-color-blue-100    text: --sds-color-blue-800
+  neutral  → bg: --sds-color-gray-100    text: --sds-color-gray-700
+
+### Props
+  variant   "success" | "warning" | "error" | "info" | "neutral"  (required)
+  size      "sm" | "md"                                            (default: "md")
+  icon      ReactNode                                              (optional, leading)
+  label     string                                                 (required)
+
+### Sizes
+  sm  → font: --sds-type-caption   padding: --sds-space-050 --sds-space-150
+  md  → font: --sds-type-label     padding: --sds-space-100 --sds-space-200
+
+### Shared Styles
+  border-radius: --sds-radius-full
+  font-weight:   --sds-weight-medium
+  display:       inline-flex, align-items: center
+  gap:           --sds-space-100 (when icon present)
+
+### Accessibility
+  - Renders as &lt;span role="status"&gt; by default
+  - Icon is aria-hidden="true"; label carries meaning
+  - Meets WCAG 2.1 AA contrast on all variant pairings
+  - Do not use color alone to convey status — always include text label</code></pre>
             </div>
           </div>
 
@@ -6996,6 +7330,28 @@ For each: use design system tokens, make it interactive enough to click through,
                 <div class="compare-card__desc">"StatusBadge is a component for showing status. It supports several variants and sizes. See the prop table for configuration options."</div>
               </div>
             </div>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example: Generated usage guidelines</p>
+            <div class="code-block">
+              <pre><code>## StatusBadge — Usage Guidelines
+
+### When to use
+  - Show the current state of a pipeline run (success, failed, running)
+  - Indicate severity level on alerts or validation messages
+  - Label connection health in integration lists (connected, degraded, offline)
+  - Display classification tags on data assets (PII detected, compliant, review needed)
+
+### When not to use
+  - Counts or quantities → use Counter component instead
+  - User-removable filter selections → use Tag with dismiss action
+  - Navigation or clickable categories → use Chip (interactive) instead
+  - Long-form status messages or explanations → use InlineBanner with description text
+
+### Content guidelines
+  - Keep labels to 1–2 words (e.g., "Active", "Needs Review")
+  - Use sentence case, not all caps
+  - Avoid vague labels like "Other" or "Misc" — be specific about the state
+  - Pair an icon with the label when badges appear in dense data tables</code></pre>
+            </div>
           </div>
 
           <div class="explainer-section" id="dsc-tips">
@@ -7057,6 +7413,29 @@ For each: use design system tokens, make it interactive enough to click through,
                 <div class="compare-card__desc">Clear question. Clear interaction to test. Feedback focuses on whether progressive disclosure works.</div>
               </div>
             </div>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example hypotheses worth prototyping</p>
+            <div class="concept-grid">
+              <div class="concept-card">
+                <div class="concept-card__num">?</div>
+                <div class="concept-card__title">Users can configure row-level security policies in under 4 steps</div>
+                <div class="concept-card__desc">Prototype needs: a policy builder with scope selection, rule definition, preview, and apply steps. Track step count and whether users backtrack or abandon mid-flow.</div>
+              </div>
+              <div class="concept-card">
+                <div class="concept-card__num">?</div>
+                <div class="concept-card__title">Progressive disclosure reduces time-to-insight on the data health dashboard</div>
+                <div class="concept-card__desc">Prototype needs: two versions of the dashboard — one flat, one using expandable sections and drill-down. Measure how quickly users identify the three most critical issues.</div>
+              </div>
+              <div class="concept-card">
+                <div class="concept-card__num">?</div>
+                <div class="concept-card__title">A guided remediation flow reduces mean-time-to-resolve for data quality issues</div>
+                <div class="concept-card__desc">Prototype needs: an alert detail view that surfaces root cause, suggests a fix, and lets users apply it in-context. Compare against the current workflow of switching to a separate config screen.</div>
+              </div>
+              <div class="concept-card">
+                <div class="concept-card__num">?</div>
+                <div class="concept-card__title">Inline column-level lineage reduces support tickets for impact analysis</div>
+                <div class="concept-card__desc">Prototype needs: a column detail panel with upstream/downstream lineage rendered as a mini-graph. Test whether users can answer "what breaks if I change this column?" without leaving the page.</div>
+              </div>
+            </div>
           </div>
 
           <div class="explainer-section" id="pv-scope">
@@ -7102,12 +7481,103 @@ Use --sds-* tokens. Include: progress indicator, back navigation, validation, em
                 <div class="callout__text">Real names trigger real objections, real edge cases, and real conversations about the domain model. Use your actual field names, user groups, and status values.</div>
               </div>
             </div>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example prompt — Data health dashboard with progressive disclosure</p>
+            <div class="code-block">
+<pre><code>Build a data health dashboard prototype to test this hypothesis:
+"Progressive disclosure reduces time-to-insight by surfacing critical
+issues first, then letting users drill into details on demand."
+
+Screen 1 — Dashboard overview
+- Top strip: 3 metric cards (Total Assets, Health Score %, Issues Open)
+- Below: a severity-sorted issue list showing asset name, issue type,
+  severity badge (critical/warning/info), and last detected timestamp
+- Each row is expandable — collapsed by default
+
+Screen 2 — Expanded issue detail (inline)
+- Clicking a row expands it to show: root cause description, affected
+  downstream assets as chips, and a "Remediate" button
+- Only one row expanded at a time; expanding another collapses the previous
+
+Screen 3 — Remediation confirmation
+- Modal overlay: shows the proposed fix, impacted assets count, and
+  "Apply Fix" / "Cancel" actions
+- After apply: row updates to "Resolved" state with a green check
+
+Use --sds-* tokens for all colors, spacing, and typography.
+States: loading skeleton for the dashboard, empty state if no issues,
+error banner if data fetch fails.
+Data: use realistic names — "customer_orders", "payment_transactions",
+"user_profiles". Show 6-8 rows with a mix of severities.</code></pre>
+            </div>
           </div>
 
           <div class="explainer-section" id="pv-test">
             <span class="explainer-label">Validation</span>
             <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Test and walk through</h2>
             <p class="explainer-lead">Verify across breakpoints, click through every path (not just the happy path), capture screenshots at decision points, and run a stakeholder walkthrough. The prototype is a conversation tool, not a deliverable.</p>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example walkthrough checklist — Data health dashboard</p>
+            <div class="sds-table-container">
+              <table class="sds-table">
+                <thead>
+                  <tr>
+                    <th>Screen / Step</th>
+                    <th>What to Check</th>
+                    <th>Pass / Fail</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dashboard load</td>
+                    <td>Metric cards populate with correct totals; issue list sorted by severity (critical first)</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Expand a critical issue</td>
+                    <td>Row expands inline; root cause and downstream assets are visible without scrolling</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Expand a second issue</td>
+                    <td>Previous row collapses automatically; only one detail panel open at a time</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Click "Remediate"</td>
+                    <td>Confirmation modal appears with proposed fix description and impacted asset count</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Cancel remediation</td>
+                    <td>Modal closes; row remains expanded in its original state with no data changes</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Apply fix (happy path)</td>
+                    <td>Modal closes; row updates to "Resolved" state; Health Score metric recalculates</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Error state — fetch failure</td>
+                    <td>Error banner appears at top of dashboard; issue list shows empty state, not broken layout</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Edge case — all resolved</td>
+                    <td>Empty state message ("No open issues") displays; metric cards show 100% health score</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div class="callout callout--insight">
               <span class="material-symbols-outlined callout__icon">bookmark</span>
               <div class="callout__body">
@@ -7210,12 +7680,63 @@ Use --sds-* tokens. Include: progress indicator, back navigation, validation, em
 Scope: From clicking "New Pipeline" to first successful run.
 For each violation, rate severity as: Critical, High, Medium, Low.
 Output as a structured table.</code></pre></div>
+            <div class="callout callout--tip">
+              <span class="material-symbols-outlined callout__icon">lightbulb</span>
+              <div class="callout__body">
+                <div class="callout__title">Depth over breadth</div>
+                <div class="callout__text">Resist the temptation to audit an entire product at once. A thorough evaluation of one critical flow — such as onboarding or data source configuration — will surface more actionable findings than a shallow pass across dozens of screens. Start with the flow that has the highest user drop-off or the most support tickets, and expand from there.</div>
+              </div>
+            </div>
           </div>
 
           <div class="explainer-section" id="uxe-inventory">
             <span class="explainer-label">Step 2</span>
             <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Capture the current state</h2>
             <p class="explainer-lead">Have Claude read the code and produce a structured inventory: components used, layout patterns, states handled, and — most importantly — states missing. Claude spots gaps you've gone blind to.</p>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example: State inventory for "Create Pipeline" flow</p>
+            <div class="sds-table-container">
+              <table class="sds-table">
+                <thead>
+                  <tr>
+                    <th>Component</th>
+                    <th>States Handled</th>
+                    <th>States Missing</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Pipeline Name Input</td>
+                    <td>Empty, filled, validation error</td>
+                    <td>Duplicate name warning, character limit reached, auto-suggest from source name</td>
+                  </tr>
+                  <tr>
+                    <td>Source Selector</td>
+                    <td>Default list, selected state, loading connectors</td>
+                    <td>No connectors configured, connector auth expired, search with zero results</td>
+                  </tr>
+                  <tr>
+                    <td>Schedule Picker</td>
+                    <td>Preset options, custom cron input, selected confirmation</td>
+                    <td>Conflict with existing pipeline schedule, timezone mismatch warning, invalid cron syntax feedback</td>
+                  </tr>
+                  <tr>
+                    <td>Mapping Table</td>
+                    <td>Auto-mapped fields, manual override, row hover</td>
+                    <td>Incompatible type pairing, unmapped required fields indicator, bulk mapping action</td>
+                  </tr>
+                  <tr>
+                    <td>Save Button</td>
+                    <td>Default, hover, disabled when form incomplete</td>
+                    <td>Saving in progress, save failed with retry, unsaved changes on navigate away</td>
+                  </tr>
+                  <tr>
+                    <td>Progress Indicator</td>
+                    <td>Step complete, current step highlighted</td>
+                    <td>Step with validation errors, optional step skipped, returning to a previous step after edits</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div class="explainer-section" id="uxe-heuristic">
@@ -7244,6 +7765,71 @@ Output as a structured table.</code></pre></div>
                   <div class="anatomy-desc">Run the evaluation again. Verify fixes resolved original issues and check for regressions.</div>
                 </div>
               </div>
+            </div>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example: Heuristic findings from a pipeline builder evaluation</p>
+            <div class="sds-table-container">
+              <table class="sds-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Heuristic Violated</th>
+                    <th>Location</th>
+                    <th>Issue</th>
+                    <th>Severity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Visibility of system status</td>
+                    <td>Save action</td>
+                    <td>After clicking Save, no loading indicator or confirmation appears. Users click repeatedly, unsure if the pipeline was created, risking duplicate submissions.</td>
+                    <td>Critical</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Error prevention</td>
+                    <td>Schedule Picker</td>
+                    <td>Users can schedule a new pipeline at the same interval as an existing one on the same source, with no conflict detection. This causes downstream data duplication.</td>
+                    <td>Critical</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Help users recognize errors</td>
+                    <td>Mapping Table</td>
+                    <td>When a field type is incompatible (e.g., mapping a timestamp to an integer column), the row silently drops during execution. No design-time warning is shown.</td>
+                    <td>Critical</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>User control and freedom</td>
+                    <td>Multi-step form</td>
+                    <td>Navigating back from Step 3 to Step 1 clears all selections in Steps 2 and 3 without warning. Users lose significant configuration work with no undo path.</td>
+                    <td>High</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Consistency and standards</td>
+                    <td>Source Selector</td>
+                    <td>Database sources open a modal for configuration while API sources use an inline expansion. The inconsistent interaction pattern increases learning cost.</td>
+                    <td>Medium</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Recognition rather than recall</td>
+                    <td>Pipeline Name Input</td>
+                    <td>Users must invent a unique name from scratch with no visibility into existing pipeline names. They cannot check for duplicates until after submission fails.</td>
+                    <td>High</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Aesthetic and minimalist design</td>
+                    <td>Mapping Table</td>
+                    <td>All source fields are shown in a flat list regardless of relevance, including system metadata columns most users will never map. The table regularly exceeds 40 rows.</td>
+                    <td>Medium</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             <div class="callout callout--tip">
               <span class="material-symbols-outlined callout__icon">lightbulb</span>
@@ -7359,6 +7945,45 @@ Output as a structured table.</code></pre></div>
             <span class="explainer-label">Step 1</span>
             <h2 class="section-heading" style="margin-top:var(--sds-space-200)">Audit completeness</h2>
             <p class="explainer-lead">Have Claude review your component and produce a gap analysis across five dimensions: visual states, data states, responsive behavior, accessibility, and edge cases.</p>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example: Gap analysis for DataTable component</p>
+            <div class="sds-table-container">
+              <table class="sds-table">
+                <thead>
+                  <tr>
+                    <th>Dimension</th>
+                    <th>Coverage</th>
+                    <th>Gaps Found</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Visual States</td>
+                    <td>Hover, active, disabled, selected row styles documented</td>
+                    <td>Loading skeleton missing; focus ring not visible on row selection; no empty illustration specified</td>
+                  </tr>
+                  <tr>
+                    <td>Data States</td>
+                    <td>Empty state, populated table, single-row scenarios covered</td>
+                    <td>No spec for partial load (streaming rows); bulk-selection count badge undefined; error row styling absent</td>
+                  </tr>
+                  <tr>
+                    <td>Responsive</td>
+                    <td>Desktop and tablet breakpoints defined with column priority rules</td>
+                    <td>Mobile layout not addressed; horizontal scroll behavior unspecified; sticky header behavior at small widths missing</td>
+                  </tr>
+                  <tr>
+                    <td>Accessibility</td>
+                    <td>ARIA roles for grid, row, and cell defined; sort button labels provided</td>
+                    <td>No live-region announcement for async data updates; keyboard navigation between cells undocumented; contrast ratio for disabled rows not verified</td>
+                  </tr>
+                  <tr>
+                    <td>Edge Cases</td>
+                    <td>Max 10,000 rows addressed with virtualization note</td>
+                    <td>Truncation rules for long cell content undefined; behavior with zero columns not handled; concurrent edit conflict resolution missing</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div class="explainer-section" id="ho-states">
@@ -7372,6 +7997,45 @@ Output as a structured table.</code></pre></div>
                 <div class="callout__text">What does an inline-editable cell look like when the row is selected, the user doesn't have edit permission, and the content overflows? You don't need to design every combination, but you need rules for how states compose.</div>
               </div>
             </div>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example: State composition matrix for inline-editable table cell</p>
+            <div class="code-block">
+              <pre><code>BASE STATES
+───────────────────────────────────────────────────
+selected      Row highlight active (background: --sds-surface-selected)
+editing       Cell shows text input, value is mutable
+error         Validation failed, destructive border + inline message
+disabled      Cell is read-only, content at 40% opacity, no pointer events
+loading       Skeleton pulse replacing cell content, no interaction
+
+COMPOSED STATES
+───────────────────────────────────────────────────
+selected + editing
+  → Show text input inside the cell WITH the selected row highlight
+    retained on the parent row. Input border uses --sds-border-focus.
+    Clicking outside the cell confirms the edit AND deselects the row.
+
+selected + disabled
+  → Show selected row highlight but render cell content at 40% opacity.
+    Row remains in selection count. No edit affordance on hover.
+    Checkbox (if present) is checked but visually dimmed.
+
+editing + error
+  → Keep the text input open. Replace the focus border with
+    --sds-border-destructive. Show inline error message below the
+    input within the cell. Pressing Enter re-validates; pressing
+    Escape reverts to the last valid value and exits edit mode.
+
+selected + editing + error
+  → Combine all three: selected row highlight on the row,
+    destructive border on the input, inline error visible.
+    Row remains selected regardless of edit outcome.
+
+ILLEGAL COMBINATIONS
+───────────────────────────────────────────────────
+disabled + editing    → Cannot occur. Disabled cells reject edit entry.
+loading + editing     → Cannot occur. Loading cells are non-interactive.
+loading + error       → Cannot occur. Validation only runs post-load.</code></pre>
+            </div>
           </div>
 
           <div class="explainer-section" id="ho-interactions">
@@ -7384,6 +8048,61 @@ Output as a structured table.</code></pre></div>
                 <div class="callout__title">Write specs for the hard interactions first</div>
                 <div class="callout__text">Simple button clicks don't need elaborate specs. Inline editing, drag-and-drop, bulk operations with mixed permissions — these need detailed behavioral documentation. Spend time where ambiguity is highest.</div>
               </div>
+            </div>
+            <p style="margin-top:var(--sds-space-500);margin-bottom:var(--sds-space-200);font-weight:var(--sds-weight-semibold);color:var(--sds-text-secondary);font-size:var(--sds-type-label)">Example: Interaction spec for inline-edit cell (DataTable)</p>
+            <div class="code-block">
+              <pre><code>COMPONENT: DataTable — Inline-Edit Cell
+SCOPE:     Editable text cells within a data table row
+────────────────────────────────────────────────────────
+
+1. CLICK BEHAVIOR
+   • Single click on an editable cell: selects the parent row.
+     Cell shows a subtle pencil icon (trailing, 16px) on hover
+     to indicate editability.
+   • Double-click on the cell: enters edit mode. Cell content is
+     replaced by a text input pre-filled with the current value,
+     text fully selected. Pencil icon is hidden during editing.
+
+2. KEYBOARD — EDIT MODE
+   • Enter: commits the current input value and exits edit mode.
+     Focus returns to the cell in its display state.
+   • Escape: discards changes, reverts to the previous value,
+     and exits edit mode. Focus returns to the cell.
+   • Tab: commits the current value AND moves focus to the next
+     editable cell in the row (left-to-right). If no more editable
+     cells exist in the row, focus moves to the first editable
+     cell of the next row.
+   • Shift+Tab: same as Tab but moves to the previous editable cell.
+
+3. KEYBOARD — NAVIGATION (non-edit mode)
+   • Arrow keys navigate between cells in the grid pattern.
+   • F2 or Enter on a focused editable cell: enters edit mode
+     (equivalent to double-click).
+
+4. FOCUS BEHAVIOR
+   • On edit entry: input receives a 2px focus ring using
+     --sds-border-focus. Parent row retains its selected state.
+   • On edit exit: focus ring moves to the cell container.
+     The cell is included in the tab order as a single stop.
+
+5. VALIDATION &amp; ERROR HANDLING
+   • Validation runs on commit (Enter, Tab) and on blur.
+   • If validation fails: cell stays in edit mode, input border
+     changes to --sds-border-destructive, and an inline error
+     message appears below the input (max 1 line, truncated
+     with tooltip if necessary).
+   • The user must fix or Escape. Tabbing away from an invalid
+     cell is blocked — focus remains until resolved or reverted.
+
+6. SCREEN READER ANNOUNCEMENTS
+   • On edit entry: announce "Editing [column name], current
+     value [value]."
+   • On successful commit: announce "[Column name] updated
+     to [new value]."
+   • On validation error: announce "Error: [error message].
+     Press Escape to revert."
+   • On Escape revert: announce "[Column name] reverted to
+     [original value]."</code></pre>
             </div>
           </div>
 
